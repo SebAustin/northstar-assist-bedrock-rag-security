@@ -1,0 +1,18 @@
+{
+    "RoleName": "NorthstarBedrockInvocationLoggingRole",
+    "PolicyName": "WriteInvocationLogs",
+    "PolicyDocument": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "WriteInvocationLogsOnly",
+                "Effect": "Allow",
+                "Action": [
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                ],
+                "Resource": "arn:aws:logs:us-east-1:609617804976:log-group:/northstar/bedrock/invocations:log-stream:aws/bedrock/modelinvocations"
+            }
+        ]
+    }
+}

@@ -1,0 +1,423 @@
+{
+    "EvaluationResults": [
+        {
+            "EvalActionName": "iam:CreateRole",
+            "EvalResourceName": "*",
+            "EvalDecision": "allowed",
+            "MatchedStatements": [
+                {
+                    "SourcePolicyId": "Pvoclabs2",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 39
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 1489
+                    }
+                },
+                {
+                    "SourcePolicyId": "Pvoclabs3",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 2258
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 2586
+                    }
+                }
+            ],
+            "MissingContextValues": [],
+            "OrganizationsDecisionDetail": {
+                "AllowedByOrganizations": true
+            }
+        },
+        {
+            "EvalActionName": "iam:PassRole",
+            "EvalResourceName": "*",
+            "EvalDecision": "allowed",
+            "MatchedStatements": [
+                {
+                    "SourcePolicyId": "Pvoclabs2",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 39
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 1489
+                    }
+                },
+                {
+                    "SourcePolicyId": "Pvoclabs3",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 2258
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 2586
+                    }
+                }
+            ],
+            "MissingContextValues": [],
+            "OrganizationsDecisionDetail": {
+                "AllowedByOrganizations": true
+            }
+        },
+        {
+            "EvalActionName": "iam:PutRolePolicy",
+            "EvalResourceName": "*",
+            "EvalDecision": "allowed",
+            "MatchedStatements": [
+                {
+                    "SourcePolicyId": "Pvoclabs2",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 39
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 1489
+                    }
+                }
+            ],
+            "MissingContextValues": [],
+            "OrganizationsDecisionDetail": {
+                "AllowedByOrganizations": true
+            }
+        },
+        {
+            "EvalActionName": "iam:DeleteRolePolicy",
+            "EvalResourceName": "*",
+            "EvalDecision": "allowed",
+            "MatchedStatements": [
+                {
+                    "SourcePolicyId": "Pvoclabs2",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 39
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 1489
+                    }
+                }
+            ],
+            "MissingContextValues": [],
+            "OrganizationsDecisionDetail": {
+                "AllowedByOrganizations": true
+            }
+        },
+        {
+            "EvalActionName": "iam:DetachRolePolicy",
+            "EvalResourceName": "*",
+            "EvalDecision": "allowed",
+            "MatchedStatements": [
+                {
+                    "SourcePolicyId": "Pvoclabs2",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 39
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 1489
+                    }
+                },
+                {
+                    "SourcePolicyId": "Pvoclabs3",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 2258
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 2586
+                    }
+                }
+            ],
+            "MissingContextValues": [],
+            "OrganizationsDecisionDetail": {
+                "AllowedByOrganizations": true
+            }
+        },
+        {
+            "EvalActionName": "bedrock:CreateGuardrail",
+            "EvalResourceName": "*",
+            "EvalDecision": "allowed",
+            "MatchedStatements": [
+                {
+                    "SourcePolicyId": "Pvoclabs1",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 2640
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 2793
+                    }
+                },
+                {
+                    "SourcePolicyId": "Pvoclabs2",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 39
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 1489
+                    }
+                },
+                {
+                    "SourcePolicyId": "Pvoclabs2",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 4641
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 4724
+                    }
+                },
+                {
+                    "SourcePolicyId": "Pvoclabs3",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 4419
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 4574
+                    }
+                }
+            ],
+            "MissingContextValues": [],
+            "OrganizationsDecisionDetail": {
+                "AllowedByOrganizations": true
+            }
+        },
+        {
+            "EvalActionName": "bedrock:PutModelInvocationLoggingConfiguration",
+            "EvalResourceName": "*",
+            "EvalDecision": "allowed",
+            "MatchedStatements": [
+                {
+                    "SourcePolicyId": "Pvoclabs1",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 2640
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 2793
+                    }
+                },
+                {
+                    "SourcePolicyId": "Pvoclabs2",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 39
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 1489
+                    }
+                },
+                {
+                    "SourcePolicyId": "Pvoclabs2",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 4641
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 4724
+                    }
+                },
+                {
+                    "SourcePolicyId": "Pvoclabs3",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 4419
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 4574
+                    }
+                }
+            ],
+            "MissingContextValues": [],
+            "OrganizationsDecisionDetail": {
+                "AllowedByOrganizations": true
+            }
+        },
+        {
+            "EvalActionName": "logs:CreateLogGroup",
+            "EvalResourceName": "*",
+            "EvalDecision": "allowed",
+            "MatchedStatements": [
+                {
+                    "SourcePolicyId": "Pvoclabs2",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 1824
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 1899
+                    }
+                }
+            ],
+            "MissingContextValues": [],
+            "OrganizationsDecisionDetail": {
+                "AllowedByOrganizations": true
+            }
+        },
+        {
+            "EvalActionName": "logs:PutMetricFilter",
+            "EvalResourceName": "*",
+            "EvalDecision": "allowed",
+            "MatchedStatements": [
+                {
+                    "SourcePolicyId": "Pvoclabs2",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 1824
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 1899
+                    }
+                }
+            ],
+            "MissingContextValues": [],
+            "OrganizationsDecisionDetail": {
+                "AllowedByOrganizations": true
+            }
+        },
+        {
+            "EvalActionName": "cloudwatch:PutMetricAlarm",
+            "EvalResourceName": "*",
+            "EvalDecision": "allowed",
+            "MatchedStatements": [
+                {
+                    "SourcePolicyId": "Pvoclabs1",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 853
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 940
+                    }
+                }
+            ],
+            "MissingContextValues": [],
+            "OrganizationsDecisionDetail": {
+                "AllowedByOrganizations": true
+            }
+        },
+        {
+            "EvalActionName": "bedrock-agentcore:UpdateHarness",
+            "EvalResourceName": "*",
+            "EvalDecision": "allowed",
+            "MatchedStatements": [
+                {
+                    "SourcePolicyId": "Pvoclabs3",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 3355
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 3455
+                    }
+                },
+                {
+                    "SourcePolicyId": "Pvoclabs3",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 4419
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 4574
+                    }
+                }
+            ],
+            "MissingContextValues": [],
+            "OrganizationsDecisionDetail": {
+                "AllowedByOrganizations": true
+            }
+        },
+        {
+            "EvalActionName": "s3:CreateBucket",
+            "EvalResourceName": "*",
+            "EvalDecision": "allowed",
+            "MatchedStatements": [
+                {
+                    "SourcePolicyId": "Pvoclabs2",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 2213
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 2302
+                    }
+                }
+            ],
+            "MissingContextValues": [],
+            "OrganizationsDecisionDetail": {
+                "AllowedByOrganizations": true
+            }
+        },
+        {
+            "EvalActionName": "s3:PutBucketVersioning",
+            "EvalResourceName": "*",
+            "EvalDecision": "allowed",
+            "MatchedStatements": [
+                {
+                    "SourcePolicyId": "Pvoclabs2",
+                    "SourcePolicyType": "IAM Policy",
+                    "StartPosition": {
+                        "Line": 1,
+                        "Column": 2213
+                    },
+                    "EndPosition": {
+                        "Line": 1,
+                        "Column": 2302
+                    }
+                }
+            ],
+            "MissingContextValues": [],
+            "OrganizationsDecisionDetail": {
+                "AllowedByOrganizations": true
+            }
+        }
+    ]
+}

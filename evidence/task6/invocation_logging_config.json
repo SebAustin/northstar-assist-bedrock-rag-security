@@ -1,0 +1,13 @@
+{
+    "loggingConfig": {
+        "cloudWatchConfig": {
+            "logGroupName": "/northstar/bedrock/invocations",
+            "roleArn": "arn:aws:iam::609617804976:role/NorthstarBedrockInvocationLoggingRole"
+        },
+        "textDataDeliveryEnabled": true,
+        "imageDataDeliveryEnabled": false,
+        "embeddingDataDeliveryEnabled": false,
+        "videoDataDeliveryEnabled": false,
+        "audioDataDeliveryEnabled": false
+    }
+}

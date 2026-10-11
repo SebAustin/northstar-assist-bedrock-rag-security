@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "GetNorthstarKnowledgeBase",
+      "Effect": "Allow",
+      "Action": "bedrock:GetKnowledgeBase",
+      "Resource": "arn:aws:bedrock:us-east-1:609617804976:knowledge-base/WUWHZC06MP"
+    },
+    {
+      "Sid": "RetrieveFromNorthstarKnowledgeBase",
+      "Effect": "Allow",
+      "Action": "bedrock:Retrieve",
+      "Resource": "arn:aws:bedrock:us-east-1:609617804976:knowledge-base/WUWHZC06MP"
+    }
+  ]
+}

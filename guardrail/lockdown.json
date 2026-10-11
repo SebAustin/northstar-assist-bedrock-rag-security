@@ -1,0 +1,41 @@
+{
+  "name": "northstar-assist-lockdown",
+  "description": "IR containment guardrail: attach to the harness to refuse every request while an incident is investigated. A match-anything regex makes the block deterministic; the denied topic is a second layer.",
+  "topicPolicyConfig": {
+    "topicsConfig": [
+      {
+        "name": "AnyRequest",
+        "definition": "Any question, instruction, request or message from a user on any subject whatsoever, including greetings and company policy questions.",
+        "examples": [
+          "What is the hybrid work policy?",
+          "Hello",
+          "Summarize the SLA",
+          "Write a poem",
+          "Who owns the incident?"
+        ],
+        "type": "DENY"
+      }
+    ]
+  },
+  "contentPolicyConfig": {
+    "filtersConfig": [
+      {
+        "type": "PROMPT_ATTACK",
+        "inputStrength": "HIGH",
+        "outputStrength": "NONE"
+      }
+    ]
+  },
+  "blockedInputMessaging": "Northstar Assist is temporarily unavailable while the security team investigates an issue. Please try again later.",
+  "blockedOutputsMessaging": "Northstar Assist is temporarily unavailable while the security team investigates an issue. Please try again later.",
+  "sensitiveInformationPolicyConfig": {
+    "regexesConfig": [
+      {
+        "name": "AnyInput",
+        "description": "Matches any non-empty text so that every request and response is blocked.",
+        "pattern": "[\\s\\S]",
+        "action": "BLOCK"
+      }
+    ]
+  }
+}

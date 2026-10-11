@@ -1,0 +1,46 @@
+{
+    "PolicyVersion": {
+        "Document": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "S3ListBucketStatement",
+                    "Effect": "Allow",
+                    "Action": [
+                        "s3:ListBucket"
+                    ],
+                    "Resource": [
+                        "arn:aws:s3:::northstar-assist-kb-5ca661ad"
+                    ],
+                    "Condition": {
+                        "StringEquals": {
+                            "aws:ResourceAccount": [
+                                "609617804976"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "Sid": "S3GetObjectStatement",
+                    "Effect": "Allow",
+                    "Action": [
+                        "s3:GetObject"
+                    ],
+                    "Resource": [
+                        "arn:aws:s3:::northstar-assist-kb-5ca661ad/*"
+                    ],
+                    "Condition": {
+                        "StringEquals": {
+                            "aws:ResourceAccount": [
+                                "609617804976"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "VersionId": "v1",
+        "IsDefaultVersion": true,
+        "CreateDate": "2026-10-10T19:05:55+00:00"
+    }
+}

@@ -1,0 +1,55 @@
+[
+  {
+    "_comment": "AI-specific signal 1: a burst of prompt-attack blocks means someone is probing the assistant.",
+    "AlarmName": "NorthstarAssist-PromptAttackSpike",
+    "AlarmDescription": "More than 5 prompt-attack blocks in 1 hour. Run the saved query 'NorthstarAssist: prompt-attack blocks by session' to see whether one session is responsible, then follow the prompt-injection playbook.",
+    "Namespace": "Northstar/Assist",
+    "MetricName": "PromptAttackBlocks",
+    "Statistic": "Sum",
+    "Period": 3600,
+    "EvaluationPeriods": 1,
+    "Threshold": 5,
+    "ComparisonOperator": "GreaterThanThreshold",
+    "TreatMissingData": "notBreaching"
+  },
+  {
+    "_comment": "AI-specific signal 2: answers delivered without a knowledge base Retrieve call. tools/answers >= 1 when every answer searched first.",
+    "AlarmName": "NorthstarAssist-ZeroRetrievalRatio",
+    "AlarmDescription": "More than 20% of answers in 1 hour were delivered without a Retrieve tool call (minimum 10 answers). Ungrounded answers, or an attack steering the model away from the knowledge base.",
+    "Metrics": [
+      {"Id": "answers", "MetricStat": {"Metric": {"Namespace": "Northstar/Assist", "MetricName": "HarnessAnswers"}, "Period": 3600, "Stat": "Sum"}, "ReturnData": false},
+      {"Id": "tools", "MetricStat": {"Metric": {"Namespace": "Northstar/Assist", "MetricName": "HarnessToolCalls"}, "Period": 3600, "Stat": "Sum"}, "ReturnData": false},
+      {"Id": "zero_retrieval_pct", "Expression": "IF(answers >= 10, IF(tools >= answers, 0, 100 * (1 - tools / answers)), 0)", "Label": "Answers without retrieval (%)", "ReturnData": true}
+    ],
+    "EvaluationPeriods": 1,
+    "Threshold": 20,
+    "ComparisonOperator": "GreaterThanThreshold",
+    "TreatMissingData": "notBreaching"
+  },
+  {
+    "_comment": "AI-specific signal 3: 542 = 3 x the p95 output tokens of benign answers (180.5, rounded up), from tools/metrics.py on the hardened suite run. Was 784 from the baseline run; the hardened prompt gives shorter answers.",
+    "AlarmName": "NorthstarAssist-TokenSpike",
+    "AlarmDescription": "A single model call produced more than 542 output tokens (3 x benign p95). Bulk data disclosure or a runaway response. The largest answer in the hardened test run was 322 tokens; before hardening, the only calls above this level were two failed test cases, including the employee-directory dump.",
+    "Namespace": "Northstar/Assist",
+    "MetricName": "OutputTokens",
+    "Statistic": "Maximum",
+    "Period": 300,
+    "EvaluationPeriods": 1,
+    "Threshold": 542,
+    "ComparisonOperator": "GreaterThanThreshold",
+    "TreatMissingData": "notBreaching"
+  },
+  {
+    "_comment": "AI-specific signal 4: any harness model call with no guardrail assessment. The IAM condition should make this impossible; the alarm detects drift.",
+    "AlarmName": "NorthstarAssist-UnguardedHarnessCall",
+    "AlarmDescription": "A harness model call completed with no guardrail assessment in its trace. The IAM guardrail condition has been removed or bypassed. Treat as a security incident.",
+    "Namespace": "Northstar/Assist",
+    "MetricName": "UnguardedHarnessCalls",
+    "Statistic": "Sum",
+    "Period": 300,
+    "EvaluationPeriods": 1,
+    "Threshold": 0,
+    "ComparisonOperator": "GreaterThanThreshold",
+    "TreatMissingData": "notBreaching"
+  }
+]

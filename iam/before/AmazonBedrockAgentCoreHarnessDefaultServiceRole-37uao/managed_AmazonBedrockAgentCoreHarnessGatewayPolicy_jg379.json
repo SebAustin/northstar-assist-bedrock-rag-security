@@ -1,0 +1,22 @@
+{
+    "PolicyVersion": {
+        "Document": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "AgentCoreGatewayAccess",
+                    "Effect": "Allow",
+                    "Action": [
+                        "bedrock-agentcore:InvokeGateway"
+                    ],
+                    "Resource": [
+                        "arn:aws:bedrock-agentcore:us-east-1:609617804976:gateway/northstar-assist-gateway-hd1uvsa8f3"
+                    ]
+                }
+            ]
+        },
+        "VersionId": "v1",
+        "IsDefaultVersion": true,
+        "CreateDate": "2026-10-10T19:13:29+00:00"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "ingestionJobSummaries": [
+        {
+            "knowledgeBaseId": "WUWHZC06MP",
+            "dataSourceId": "DR2JEWLD2V",
+            "ingestionJobId": "ZBL4LAMGLO",
+            "status": "COMPLETE",
+            "startedAt": "2026-10-10T19:06:23.931932+00:00",
+            "updatedAt": "2026-10-10T19:09:26.468985+00:00",
+            "statistics": {
+                "numberOfDocumentsScanned": 30,
+                "numberOfMetadataDocumentsScanned": 0,
+                "numberOfNewDocumentsIndexed": 30,
+                "numberOfModifiedDocumentsIndexed": 0,
+                "numberOfMetadataDocumentsModified": 0,
+                "numberOfDocumentsDeleted": 0,
+                "numberOfDocumentsFailed": 0,
+                "numberOfDocumentsSkipped": 0
+            }
+        }
+    ]
+}

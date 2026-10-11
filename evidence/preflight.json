@@ -1,0 +1,46 @@
+{
+  "account_suffix": "...4976",
+  "region": "us-east-1",
+  "probes": [
+    {
+      "probe": "bedrock:ListGuardrails",
+      "result": "ALLOW"
+    },
+    {
+      "probe": "bedrock:GetModelInvocationLoggingConfiguration",
+      "result": "ALLOW"
+    },
+    {
+      "probe": "bedrock:GetInferenceProfile",
+      "result": "ALLOW"
+    },
+    {
+      "probe": "agentcore:ListHarnesses",
+      "result": "ALLOW"
+    },
+    {
+      "probe": "agentcore:ListGateways",
+      "result": "ALLOW"
+    },
+    {
+      "probe": "logs:DescribeLogGroups",
+      "result": "ALLOW"
+    },
+    {
+      "probe": "cloudwatch:DescribeAlarms",
+      "result": "ALLOW"
+    },
+    {
+      "probe": "access-analyzer:ValidatePolicy",
+      "result": "ALLOW"
+    },
+    {
+      "probe": "bedrock-runtime:Converse(Haiku 4.5)",
+      "result": "ALLOW"
+    },
+    {
+      "probe": "iam:SimulatePrincipalPolicy",
+      "result": "ALLOW"
+    }
+  ]
+}

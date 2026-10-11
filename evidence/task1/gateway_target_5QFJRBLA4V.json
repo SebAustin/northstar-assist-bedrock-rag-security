@@ -1,0 +1,36 @@
+{
+    "gatewayArn": "arn:aws:bedrock-agentcore:us-east-1:609617804976:gateway/northstar-assist-gateway-hd1uvsa8f3",
+    "targetId": "5QFJRBLA4V",
+    "createdAt": "2026-10-10T19:09:27.329912+00:00",
+    "updatedAt": "2026-10-10T19:09:28.175230+00:00",
+    "status": "READY",
+    "name": "northstar-kb",
+    "targetConfiguration": {
+        "mcp": {
+            "connector": {
+                "source": {
+                    "connectorId": "bedrock-knowledge-bases"
+                },
+                "configurations": [
+                    {
+                        "name": "Retrieve",
+                        "description": "Search Northstar Technologies internal documents (policies, procedures, reports, spreadsheets) and return relevant passages with source documents.",
+                        "parameterValues": {
+                            "retrievalConfiguration": {
+                                "managedSearchConfiguration": {
+                                    "numberOfResults": 5
+                                }
+                            },
+                            "knowledgeBaseId": "WUWHZC06MP"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "credentialProviderConfigurations": [
+        {
+            "credentialProviderType": "GATEWAY_IAM_ROLE"
+        }
+    ]
+}

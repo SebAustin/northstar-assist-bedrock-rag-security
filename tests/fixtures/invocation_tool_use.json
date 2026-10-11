@@ -1,0 +1,60 @@
+{
+  "_note": "Synthetic fixture shaped after the documented Bedrock model-invocation-log schema. Field names MUST be re-validated against real log lines (PLAN R2) before relying on them.",
+  "schemaType": "ModelInvocationLog",
+  "schemaVersion": "1.0",
+  "timestamp": "2026-10-08T15:01:06Z",
+  "accountId": "111122223333",
+  "region": "us-east-1",
+  "requestId": "req-tooluse",
+  "operation": "ConverseStream",
+  "modelId": "arn:aws:bedrock:us-east-1:111122223333:inference-profile/us.anthropic.claude-haiku-4-5-20251001-v1:0",
+  "identity": {
+    "arn": "arn:aws:sts::111122223333:assumed-role/AmazonBedrockAgentCoreHarnessDefaultServiceRole-abc123/session-1"
+  },
+  "input": {
+    "inputContentType": "application/json",
+    "inputTokenCount": 905,
+    "inputBodyJson": {
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "text": "What is Northstar's hybrid work policy? Name the source document."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "output": {
+    "outputContentType": "application/json",
+    "outputTokenCount": 61,
+    "outputBodyJson": {
+      "output": {
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "toolUse": {
+                "toolUseId": "tu-1",
+                "name": "northstar-kb___Retrieve",
+                "input": {
+                  "retrievalQuery": {
+                    "text": "hybrid work policy"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "stopReason": "tool_use",
+      "usage": {
+        "inputTokens": 905,
+        "outputTokens": 61,
+        "totalTokens": 966
+      }
+    }
+  }
+}

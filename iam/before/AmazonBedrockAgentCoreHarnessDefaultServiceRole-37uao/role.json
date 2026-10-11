@@ -1,0 +1,31 @@
+{
+    "Role": {
+        "Path": "/service-role/",
+        "RoleName": "AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao",
+        "RoleId": "AROAY34ANP2YOLO73U5YV",
+        "Arn": "arn:aws:iam::609617804976:role/service-role/AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao",
+        "CreateDate": "2026-10-10T19:13:29+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "bedrock-agentcore.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole",
+                    "Condition": {
+                        "StringEquals": {
+                            "aws:SourceAccount": "609617804976"
+                        },
+                        "ArnLike": {
+                            "aws:SourceArn": "arn:aws:bedrock-agentcore:us-east-1:609617804976:*"
+                        }
+                    }
+                }
+            ]
+        },
+        "MaxSessionDuration": 3600,
+        "RoleLastUsed": {}
+    }
+}

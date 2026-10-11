@@ -1,0 +1,4 @@
+{"answer":"You can work remotely up to 3 days per week.","action":"NONE","grounding":[{"type":"GROUNDING","score":1.0,"threshold":0.7,"action":"NONE"},{"type":"RELEVANCE","score":1.0,"threshold":0.6,"action":"NONE"}]}
+{"answer":"You can work remotely 5 days per week and never need to come to the office.","action":"GUARDRAIL_INTERVENED","grounding":[{"type":"GROUNDING","score":0.0,"threshold":0.7,"action":"BLOCKED"},{"type":"RELEVANCE","score":0.98,"threshold":0.6,"action":"NONE"}]}
+--- without a grounding source (what the harness sends):
+{"action":"NONE","grounding":[]}

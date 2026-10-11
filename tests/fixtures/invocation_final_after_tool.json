@@ -1,0 +1,113 @@
+{
+  "_note": "Synthetic fixture shaped after the documented Bedrock model-invocation-log schema. Field names MUST be re-validated against real log lines (PLAN R2) before relying on them.",
+  "schemaType": "ModelInvocationLog",
+  "schemaVersion": "1.0",
+  "timestamp": "2026-10-08T15:01:09Z",
+  "accountId": "111122223333",
+  "region": "us-east-1",
+  "requestId": "req-final",
+  "operation": "ConverseStream",
+  "modelId": "arn:aws:bedrock:us-east-1:111122223333:inference-profile/us.anthropic.claude-haiku-4-5-20251001-v1:0",
+  "identity": {
+    "arn": "arn:aws:sts::111122223333:assumed-role/AmazonBedrockAgentCoreHarnessDefaultServiceRole-abc123/session-1"
+  },
+  "input": {
+    "inputContentType": "application/json",
+    "inputTokenCount": 1342,
+    "inputBodyJson": {
+      "system": [
+        {
+          "text": "You are Northstar Assist."
+        }
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "text": "What is Northstar's hybrid work policy? Name the source document."
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "toolUse": {
+                "toolUseId": "tu-1",
+                "name": "northstar-kb___Retrieve",
+                "input": {
+                  "retrievalQuery": {
+                    "text": "hybrid work policy"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "toolResult": {
+                "toolUseId": "tu-1",
+                "status": "success",
+                "content": [
+                  {
+                    "json": {
+                      "retrievalResults": [
+                        {
+                          "content": {
+                            "text": "Employees may work remotely up to 3 days per week."
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "output": {
+    "outputContentType": "application/json",
+    "outputTokenCount": 88,
+    "outputBodyJson": [
+      {
+        "messageStart": {
+          "role": "assistant"
+        }
+      },
+      {
+        "contentBlockDelta": {
+          "contentBlockIndex": 0,
+          "delta": {
+            "text": "Up to 3 days remote (company_policies_handbook.html)."
+          }
+        }
+      },
+      {
+        "contentBlockStop": {
+          "contentBlockIndex": 0
+        }
+      },
+      {
+        "messageStop": {
+          "stopReason": "end_turn"
+        }
+      },
+      {
+        "metadata": {
+          "usage": {
+            "inputTokens": 1342,
+            "outputTokens": 88,
+            "totalTokens": 1430
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+    "PolicyVersion": {
+        "Document": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "AllowBedrockGetKnowledgeBaseFromKnowledgeBase",
+                    "Effect": "Allow",
+                    "Action": "bedrock:GetKnowledgeBase",
+                    "Resource": [
+                        "arn:aws:bedrock:us-east-1:609617804976:knowledge-base/WUWHZC06MP"
+                    ]
+                },
+                {
+                    "Sid": "AllowBedrockRetrieveFromKnowledgeBase",
+                    "Effect": "Allow",
+                    "Action": "bedrock:Retrieve",
+                    "Resource": [
+                        "arn:aws:bedrock:us-east-1:609617804976:knowledge-base/WUWHZC06MP"
+                    ]
+                },
+                {
+                    "Sid": "AllowBedrockAgenticRetrieveFromKnowledgeBase",
+                    "Effect": "Allow",
+                    "Action": "bedrock:AgenticRetrieveStream",
+                    "Resource": "*"
+                },
+                {
+                    "Sid": "AllowBedrockInvokeModelForKnowledgeBase",
+                    "Effect": "Allow",
+                    "Action": [
+                        "bedrock:InvokeModel",
+                        "bedrock:InvokeModelWithResponseStream"
+                    ],
+                    "Resource": [
+                        "arn:aws:bedrock:*::foundation-model/*",
+                        "arn:aws:bedrock:us-east-1:609617804976:inference-profile/*",
+                        "arn:aws:bedrock:us-east-1:609617804976:provisioned-model/*",
+                        "arn:aws:bedrock:us-east-1:609617804976:custom-model/*"
+                    ],
+                    "Condition": {
+                        "ForAnyValue:StringEquals": {
+                            "aws:CalledVia": "bedrock.amazonaws.com"
+                        }
+                    }
+                },
+                {
+                    "Sid": "AllowBedrockRerankForKnowledgeBase",
+                    "Effect": "Allow",
+                    "Action": "bedrock:Rerank",
+                    "Resource": "*",
+                    "Condition": {
+                        "ForAnyValue:StringEquals": {
+                            "aws:CalledVia": "bedrock.amazonaws.com"
+                        }
+                    }
+                },
+                {
+                    "Sid": "AllowBedrockGetInferenceProfileForKnowledgeBase",
+                    "Effect": "Allow",
+                    "Action": "bedrock:GetInferenceProfile",
+                    "Resource": "arn:aws:bedrock:us-east-1:609617804976:inference-profile/*",
+                    "Condition": {
+                        "ForAnyValue:StringEquals": {
+                            "aws:CalledVia": "bedrock.amazonaws.com"
+                        }
+                    }
+                },
+                {
+                    "Sid": "AllowBedrockApplyGuardrailForKnowledgeBase",
+                    "Effect": "Allow",
+                    "Action": "bedrock:ApplyGuardrail",
+                    "Resource": "arn:aws:bedrock:us-east-1:609617804976:guardrail/*",
+                    "Condition": {
+                        "ForAnyValue:StringEquals": {
+                            "aws:CalledVia": "bedrock.amazonaws.com"
+                        }
+                    }
+                }
+            ]
+        },
+        "VersionId": "v1",
+        "IsDefaultVersion": true,
+        "CreateDate": "2026-10-10T19:09:16+00:00"
+    }
+}

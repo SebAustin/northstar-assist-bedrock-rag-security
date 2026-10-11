@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-11T00:11:59Z",
+  "account": "609617804976",
+  "region": "us-east-1",
+  "note": "Unfiltered listings after infra/99_teardown.sh. Pvoclabs*, voc-cancel-cred and AWSServiceRoleForBedrockAgentCoreRuntimeIdentity belong to the lab and to AWS, not to this project.",
+  "listings": {
+    "harnesses": "none",
+    "agent_runtimes": "none",
+    "gateways": "none",
+    "workload_identities": "none",
+    "memories": "none",
+    "knowledge_bases": "none",
+    "guardrails": "none",
+    "invocation_logging": "none",
+    "s3_buckets": "none",
+    "log_groups": "none",
+    "log_delivery_sources": "none",
+    "log_delivery_destinations": "none",
+    "saved_queries": "none",
+    "alarms": "none",
+    "customer_managed_policies": "Pvoclabs2\tPvoclabs4\tPvoclabs1\tPvoclabs3\tvoc-cancel-cred",
+    "roles_bedrock_or_northstar": "AWSServiceRoleForBedrockAgentCoreRuntimeIdentity"
+  }
+}

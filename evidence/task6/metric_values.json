@@ -1,0 +1,107 @@
+{
+    "MetricDataResults": [
+        {
+            "Id": "guardrailinterventions",
+            "Label": "GuardrailInterventions",
+            "Timestamps": [
+                "2026-10-10T16:00:00-05:00"
+            ],
+            "Values": [
+                7.0
+            ],
+            "StatusCode": "Complete"
+        },
+        {
+            "Id": "promptattackblocks",
+            "Label": "PromptAttackBlocks",
+            "Timestamps": [
+                "2026-10-10T16:00:00-05:00"
+            ],
+            "Values": [
+                7.0
+            ],
+            "StatusCode": "Complete"
+        },
+        {
+            "Id": "deniedtopicblocks",
+            "Label": "DeniedTopicBlocks",
+            "Timestamps": [
+                "2026-10-10T16:00:00-05:00"
+            ],
+            "Values": [
+                7.0
+            ],
+            "StatusCode": "Complete"
+        },
+        {
+            "Id": "sensitiveinfoactions",
+            "Label": "SensitiveInfoActions",
+            "Timestamps": [
+                "2026-10-10T16:00:00-05:00"
+            ],
+            "Values": [
+                0.0
+            ],
+            "StatusCode": "Complete"
+        },
+        {
+            "Id": "harnessanswers",
+            "Label": "HarnessAnswers",
+            "Timestamps": [
+                "2026-10-10T16:00:00-05:00"
+            ],
+            "Values": [
+                0.0
+            ],
+            "StatusCode": "Complete"
+        },
+        {
+            "Id": "harnesstoolcalls",
+            "Label": "HarnessToolCalls",
+            "Timestamps": [
+                "2026-10-10T16:00:00-05:00"
+            ],
+            "Values": [
+                0.0
+            ],
+            "StatusCode": "Complete"
+        },
+        {
+            "Id": "kbretrievals",
+            "Label": "KbRetrievals",
+            "Timestamps": [
+                "2026-10-10T16:00:00-05:00"
+            ],
+            "Values": [
+                0.0
+            ],
+            "StatusCode": "Complete"
+        },
+        {
+            "Id": "unguardedharnesscalls",
+            "Label": "UnguardedHarnessCalls",
+            "Timestamps": [
+                "2026-10-10T16:00:00-05:00"
+            ],
+            "Values": [
+                0.0
+            ],
+            "StatusCode": "Complete"
+        },
+        {
+            "Id": "outmax",
+            "Label": "OutputTokens",
+            "Timestamps": [],
+            "Values": [],
+            "StatusCode": "Complete"
+        },
+        {
+            "Id": "inmax",
+            "Label": "InputTokens",
+            "Timestamps": [],
+            "Values": [],
+            "StatusCode": "Complete"
+        }
+    ],
+    "Messages": []
+}

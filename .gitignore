@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+streamlit_app/.env
+.DS_Store
+~$*
+results/raw/
+infra/state.env
+.coverage
+*.zip

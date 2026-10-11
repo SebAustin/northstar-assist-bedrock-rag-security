@@ -1,0 +1,56 @@
+{
+    "events": [
+        {
+            "timestamp": 1791660652736,
+            "message": "/opt/amazon/lib/python3.12/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'AWS-LC FIPS 4.1.1'. See: https://github.com/urllib3/urllib3/issues/3020",
+            "ingestionTime": 1791660653863
+        },
+        {
+            "timestamp": 1791660652736,
+            "message": "  warnings.warn(",
+            "ingestionTime": 1791660653863
+        },
+        {
+            "timestamp": 1791660653768,
+            "message": "2026-10-10 19:30:53,767 WARNING [opentelemetry.instrumentation.logging] [__init__.py:234] [trace_id=0 span_id=0 resource.service.name=harness_NorthstarAssist.DEFAULT trace_sampled=False] - Skipping installation of LoggingHandler from `opentelemetry-instrumentation-logging` to avoid duplicate logs. The SDK's deprecated LoggingHandler is already active (OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true). To migrate, unset this environment variable. The SDK's handler will be removed in a future release.",
+            "ingestionTime": 1791660653863
+        },
+        {
+            "timestamp": 1791660654335,
+            "message": "2026-10-10 19:30:54,334 INFO [botocore.credentials] [credentials.py:1171] [trace_id=0 span_id=0 resource.service.name=harness_NorthstarAssist.DEFAULT trace_sampled=False] - Found credentials from IAM Role: execution_role",
+            "ingestionTime": 1791660657521
+        },
+        {
+            "timestamp": 1791660654947,
+            "message": "2026-10-10 19:30:54,947 INFO [amazon.opentelemetry.distro.instrumentation.mcp] [__init__.py:34] [trace_id=0 span_id=0 resource.service.name=harness_NorthstarAssist.DEFAULT trace_sampled=False] - Initializing MCP instrumentor.",
+            "ingestionTime": 1791660657521
+        },
+        {
+            "timestamp": 1791660660145,
+            "message": "{\"level\":\"INFO\",\"logger\":\"botocore.credentials\",\"message\":\"Found credentials from IAM Role: execution_role\",\"requestId\":\"-\",\"sessionId\":\"-\"}",
+            "ingestionTime": 1791660660419
+        },
+        {
+            "timestamp": 1791660660275,
+            "message": "{\"level\":\"INFO\",\"logger\":\"uvicorn.error\",\"message\":\"Started server process [1]\",\"requestId\":\"-\",\"sessionId\":\"-\"}",
+            "ingestionTime": 1791660660419
+        },
+        {
+            "timestamp": 1791660660275,
+            "message": "{\"level\":\"INFO\",\"logger\":\"uvicorn.error\",\"message\":\"Waiting for application startup.\",\"requestId\":\"-\",\"sessionId\":\"-\"}",
+            "ingestionTime": 1791660660419
+        },
+        {
+            "timestamp": 1791660660276,
+            "message": "{\"level\":\"INFO\",\"logger\":\"uvicorn.error\",\"message\":\"Application startup complete.\",\"requestId\":\"-\",\"sessionId\":\"-\"}",
+            "ingestionTime": 1791660660419
+        },
+        {
+            "timestamp": 1791660660276,
+            "message": "{\"level\":\"INFO\",\"logger\":\"uvicorn.error\",\"message\":\"Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)\",\"requestId\":\"-\",\"sessionId\":\"-\"}",
+            "ingestionTime": 1791660660419
+        }
+    ],
+    "nextForwardToken": "f/39955367867046212964935595233379569012144889777422073860/s",
+    "nextBackwardToken": "b/39955367698898594168014696738274507268972808816255631360/s"
+}

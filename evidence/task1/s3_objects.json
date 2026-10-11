@@ -1,0 +1,122 @@
+[
+    {
+        "Key": "csv/aws_infrastructure_inventory.csv",
+        "Size": 2995
+    },
+    {
+        "Key": "csv/customer_accounts.csv",
+        "Size": 2412
+    },
+    {
+        "Key": "csv/employee_directory.csv",
+        "Size": 2804
+    },
+    {
+        "Key": "csv/sales_pipeline.csv",
+        "Size": 3215
+    },
+    {
+        "Key": "csv/support_tickets.csv",
+        "Size": 3031
+    },
+    {
+        "Key": "docx/disaster_recovery_plan.docx",
+        "Size": 16671
+    },
+    {
+        "Key": "docx/product_requirements_document.docx",
+        "Size": 17511
+    },
+    {
+        "Key": "docx/quarterly_business_review.docx",
+        "Size": 17865
+    },
+    {
+        "Key": "docx/security_policy.docx",
+        "Size": 16218
+    },
+    {
+        "Key": "docx/sow_template.docx",
+        "Size": 16024
+    },
+    {
+        "Key": "html/api_authentication_guide.html",
+        "Size": 9994
+    },
+    {
+        "Key": "html/aws_architecture_documentation.html",
+        "Size": 20990
+    },
+    {
+        "Key": "html/company_policies_handbook.html",
+        "Size": 18435
+    },
+    {
+        "Key": "html/product_features_overview.html",
+        "Size": 12573
+    },
+    {
+        "Key": "html/troubleshooting_guide.html",
+        "Size": 16875
+    },
+    {
+        "Key": "pdf/api_best_practices.pdf",
+        "Size": 46425
+    },
+    {
+        "Key": "pdf/compliance_overview.pdf",
+        "Size": 46065
+    },
+    {
+        "Key": "pdf/customer_success_playbook.pdf",
+        "Size": 46854
+    },
+    {
+        "Key": "pdf/data_governance_policy.pdf",
+        "Size": 46791
+    },
+    {
+        "Key": "pdf/service_level_agreement.pdf",
+        "Size": 45741
+    },
+    {
+        "Key": "txt/company_announcement_q3_kickoff.txt",
+        "Size": 6746
+    },
+    {
+        "Key": "txt/engineering_team_meeting_notes_2023_06_15.txt",
+        "Size": 3540
+    },
+    {
+        "Key": "txt/incident_report_2023_06_03.txt",
+        "Size": 6458
+    },
+    {
+        "Key": "txt/onboarding_checklist_engineering.txt",
+        "Size": 6743
+    },
+    {
+        "Key": "txt/release_notes_v2.5.0.txt",
+        "Size": 5644
+    },
+    {
+        "Key": "xlsx/budget_tracking_q3_2023.xlsx",
+        "Size": 6454
+    },
+    {
+        "Key": "xlsx/employee_training_records.xlsx",
+        "Size": 6660
+    },
+    {
+        "Key": "xlsx/okr_tracking_q3_2023.xlsx",
+        "Size": 6442
+    },
+    {
+        "Key": "xlsx/project_timeline_q3_2023.xlsx",
+        "Size": 5972
+    },
+    {
+        "Key": "xlsx/vendor_management.xlsx",
+        "Size": 6460
+    }
+]

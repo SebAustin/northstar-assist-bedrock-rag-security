@@ -1,0 +1,30 @@
+[
+  {
+    "name": "NorthstarAssist: interventions by session",
+    "query": "fields @timestamp, identity.arn, output.outputBodyJson.stopReason as stop\n| filter identity.arn like /__HARNESS_ROLE__/ and output.outputBodyJson.stopReason = \"guardrail_intervened\"\n| parse identity.arn \"*/BedrockAgentCore-*\" as role, session\n| stats count(*) as interventions, min(@timestamp) as first_seen, max(@timestamp) as last_seen by session\n| sort interventions desc\n| limit 50"
+  },
+  {
+    "name": "NorthstarAssist: prompt-attack blocks by session",
+    "query": "fields @timestamp, identity.arn, @message\n| filter identity.arn like /__HARNESS_ROLE__/ and @message like /\"type\":\"PROMPT_ATTACK\"/\n| parse identity.arn \"*/BedrockAgentCore-*\" as role, session\n| stats count(*) as prompt_attack_blocks, min(@timestamp) as first_seen, max(@timestamp) as last_seen by session\n| sort prompt_attack_blocks desc\n| limit 50"
+  },
+  {
+    "name": "NorthstarAssist: timeline for one session",
+    "query": "fields @timestamp, requestId, operation, output.outputBodyJson.stopReason as stop, input.inputTokenCount as in_tokens, output.outputTokenCount as out_tokens\n| filter identity.arn like /BedrockAgentCore-REPLACE_WITH_SESSION/\n| sort @timestamp asc\n| limit 200"
+  },
+  {
+    "name": "NorthstarAssist: answers without retrieval",
+    "query": "fields @timestamp, identity.arn, requestId, output.outputTokenCount as out_tokens\n| filter identity.arn like /__HARNESS_ROLE__/ and operation = \"ConverseStream\" and output.outputBodyJson.stopReason = \"end_turn\" and @message not like /\"toolResult\"/\n| parse identity.arn \"*/BedrockAgentCore-*\" as role, session\n| sort @timestamp desc\n| limit 100"
+  },
+  {
+    "name": "NorthstarAssist: largest responses",
+    "query": "fields @timestamp, identity.arn, requestId, input.inputTokenCount as in_tokens, output.outputTokenCount as out_tokens, output.outputBodyJson.stopReason as stop\n| filter identity.arn like /__HARNESS_ROLE__/\n| parse identity.arn \"*/BedrockAgentCore-*\" as role, session\n| sort out_tokens desc\n| limit 25"
+  },
+  {
+    "name": "NorthstarAssist: harness calls with no guardrail assessment",
+    "query": "fields @timestamp, identity.arn, requestId, modelId\n| filter identity.arn like /__HARNESS_ROLE__/ and @message not like /\"appliedGuardrailDetails\":/\n| sort @timestamp desc\n| limit 50"
+  },
+  {
+    "name": "NorthstarAssist: top retrieved document per model call",
+    "query": "fields @timestamp, identity.arn, requestId\n| filter identity.arn like /__HARNESS_ROLE__/ and @message like /\"toolResult\"/\n| parse @message /_document_title\\\\\":\\\\\"(?<document>[^\\\\]+)/\n| stats count(*) as calls by document\n| sort calls desc"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "question": "Does the session name in the invocation log equal the runtimeSessionId the caller sent to InvokeHarness?",
+  "sent_runtimeSessionId": "79eea7e9-f0fc-4332-9e46-d095a3cf6e7d",
+  "sent_at_utc": "2026-10-10T21:54:38Z",
+  "logged_identity_arn_suffix": "AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao/BedrockAgentCore-e02f1723-b7d2-4d13-9abc-858ebabca4a5",
+  "logged_records": ["21:54:32 tool_use", "21:54:34 KB embedding (FMKB-Embed)", "21:54:34 end_turn"],
+  "answer": "No. The logged name is stable across the model calls of one harness session, so it groups them, but it is a different UUID from the caller's runtimeSessionId. Joining a logged session to an application session needs the application's own record of runtimeSessionId and time."
+}

@@ -1,0 +1,12 @@
+{
+    "AlarmHistoryItems": [
+        {
+            "AlarmName": "NorthstarAssist-PromptAttackSpike",
+            "AlarmType": "MetricAlarm",
+            "Timestamp": "2026-10-10T16:37:29.631000-05:00",
+            "HistoryItemType": "StateUpdate",
+            "HistorySummary": "Alarm updated from INSUFFICIENT_DATA to ALARM",
+            "HistoryData": "{\"version\":\"1.0\",\"oldState\":{\"stateValue\":\"INSUFFICIENT_DATA\",\"stateReason\":\"Unchecked: Initial alarm creation\"},\"newState\":{\"stateValue\":\"ALARM\",\"stateReason\":\"Threshold Crossed: 1 datapoint [7.0 (10/10/26 20:37:00)] was greater than the threshold (5.0).\",\"stateReasonData\":{\"version\":\"1.0\",\"queryDate\":\"2026-10-10T21:37:29.631+0000\",\"startDate\":\"2026-10-10T20:37:00.000+0000\",\"statistic\":\"Sum\",\"period\":3600,\"recentDatapoints\":[7.0],\"threshold\":5.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-10-10T20:37:00.000+0000\",\"sampleCount\":7.0,\"value\":7.0}]}}}"
+        }
+    ]
+}

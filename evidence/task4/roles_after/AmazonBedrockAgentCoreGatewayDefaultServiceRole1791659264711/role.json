@@ -1,0 +1,35 @@
+{
+    "Role": {
+        "Path": "/service-role/",
+        "RoleName": "AmazonBedrockAgentCoreGatewayDefaultServiceRole1791659264711",
+        "RoleId": "AROAY34ANP2YHF4Q67V5N",
+        "Arn": "arn:aws:iam::609617804976:role/service-role/AmazonBedrockAgentCoreGatewayDefaultServiceRole1791659264711",
+        "CreateDate": "2026-10-10T19:09:08+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "AmazonBedrockAgentCoreGatewayBasePolicyProd",
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "bedrock-agentcore.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole",
+                    "Condition": {
+                        "StringEquals": {
+                            "aws:SourceAccount": "609617804976"
+                        },
+                        "ArnLike": {
+                            "aws:SourceArn": "arn:aws:bedrock-agentcore:us-east-1:609617804976:gateway/northstar-assist-gateway-*"
+                        }
+                    }
+                }
+            ]
+        },
+        "MaxSessionDuration": 3600,
+        "RoleLastUsed": {
+            "LastUsedDate": "2026-10-10T20:04:17+00:00",
+            "Region": "us-east-1"
+        }
+    }
+}

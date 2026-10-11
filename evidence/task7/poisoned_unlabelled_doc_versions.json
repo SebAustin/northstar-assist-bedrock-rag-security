@@ -1,0 +1,33 @@
+{
+    "Versions": [
+        {
+            "ETag": "\"f6e0c5f7e77518f529c9b9a7c3436f18\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 949,
+            "StorageClass": "STANDARD",
+            "Key": "faq/northstar_workplace_faq.txt",
+            "VersionId": "GM_K6l5oo1Wx_0yeNUtYvuAp_i9fqDCX",
+            "IsLatest": false,
+            "LastModified": "2026-10-10T23:14:12+00:00",
+            "Owner": {
+                "ID": "8dc9104db5c3f49a7eab01353bb744f4eb6635bf28f65067977e5c703cfeb45c"
+            }
+        }
+    ],
+    "DeleteMarkers": [
+        {
+            "Owner": {
+                "ID": "8dc9104db5c3f49a7eab01353bb744f4eb6635bf28f65067977e5c703cfeb45c"
+            },
+            "Key": "faq/northstar_workplace_faq.txt",
+            "VersionId": "dDlt57KfWocnocY9phKbWUMU9v0Fi4Ws",
+            "IsLatest": true,
+            "LastModified": "2026-10-10T23:17:39+00:00"
+        }
+    ],
+    "RequestCharged": null,
+    "Prefix": "faq/northstar_workplace_faq.txt"
+}

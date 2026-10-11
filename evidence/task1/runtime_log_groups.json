@@ -1,0 +1,15 @@
+{
+    "logGroups": [
+        {
+            "logGroupName": "/aws/bedrock-agentcore/runtimes/harness_NorthstarAssist-92Prr07JAK-DEFAULT",
+            "creationTime": 1791660178760,
+            "metricFilterCount": 0,
+            "arn": "arn:aws:logs:us-east-1:609617804976:log-group:/aws/bedrock-agentcore/runtimes/harness_NorthstarAssist-92Prr07JAK-DEFAULT:*",
+            "storedBytes": 0,
+            "logGroupClass": "STANDARD",
+            "logGroupArn": "arn:aws:logs:us-east-1:609617804976:log-group:/aws/bedrock-agentcore/runtimes/harness_NorthstarAssist-92Prr07JAK-DEFAULT",
+            "deletionProtectionEnabled": false,
+            "bearerTokenAuthenticationEnabled": false
+        }
+    ]
+}

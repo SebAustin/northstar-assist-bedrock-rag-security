@@ -1,0 +1,27 @@
+{
+    "gatewayArn": "arn:aws:bedrock-agentcore:us-east-1:609617804976:gateway/northstar-assist-gateway-hd1uvsa8f3",
+    "gatewayId": "northstar-assist-gateway-hd1uvsa8f3",
+    "gatewayUrl": "https://northstar-assist-gateway-hd1uvsa8f3.gateway.bedrock-agentcore.us-east-1.amazonaws.com/mcp",
+    "createdAt": "2026-10-10T19:09:14.297892+00:00",
+    "updatedAt": "2026-10-10T19:09:15.079615+00:00",
+    "status": "READY",
+    "name": "northstar-assist-gateway",
+    "roleArn": "arn:aws:iam::609617804976:role/service-role/AmazonBedrockAgentCoreGatewayDefaultServiceRole1791659264711",
+    "protocolType": "MCP",
+    "protocolConfiguration": {
+        "mcp": {
+            "supportedVersions": [
+                "2025-11-25",
+                "2026-07-28"
+            ],
+            "streamingConfiguration": {
+                "enableResponseStreaming": false
+            }
+        }
+    },
+    "authorizerType": "AWS_IAM",
+    "workloadIdentityDetails": {
+        "workloadIdentityArn": "arn:aws:bedrock-agentcore:us-east-1:609617804976:workload-identity-directory/default/workload-identity/northstar-assist-gateway-hd1uvsa8f3"
+    },
+    "exceptionLevel": "DEBUG"
+}

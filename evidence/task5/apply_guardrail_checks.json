@@ -1,0 +1,10 @@
+{
+  "lockdown": {
+    "benign": "GUARDRAIL_INTERVENED",
+    "off_topic": "GUARDRAIL_INTERVENED"
+  },
+  "main": {
+    "benign": "NONE",
+    "injection": "GUARDRAIL_INTERVENED"
+  }
+}

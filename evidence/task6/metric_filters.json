@@ -1,0 +1,178 @@
+{
+    "metricFilters": [
+        {
+            "filterName": "NorthstarAssist-DeniedTopicBlocks",
+            "filterPattern": "\"AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao\" \"\\\"type\\\":\\\"DENY\\\"\" \"\\\"action\\\":\\\"BLOCKED\\\"\"",
+            "metricTransformations": [
+                {
+                    "metricName": "DeniedTopicBlocks",
+                    "metricNamespace": "Northstar/Assist",
+                    "metricValue": "1",
+                    "defaultValue": 0.0,
+                    "unit": "Count"
+                }
+            ],
+            "creationTime": 1791668135878,
+            "logGroupName": "/northstar/bedrock/invocations",
+            "applyOnTransformedLogs": false
+        },
+        {
+            "filterName": "NorthstarAssist-GuardrailInterventions",
+            "filterPattern": "{ ($.identity.arn = \"*AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao*\") && ($.output.outputBodyJson.stopReason = \"guardrail_intervened\") }",
+            "metricTransformations": [
+                {
+                    "metricName": "GuardrailInterventions",
+                    "metricNamespace": "Northstar/Assist",
+                    "metricValue": "1",
+                    "defaultValue": 0.0,
+                    "unit": "Count"
+                }
+            ],
+            "creationTime": 1791668134442,
+            "logGroupName": "/northstar/bedrock/invocations",
+            "applyOnTransformedLogs": false
+        },
+        {
+            "filterName": "NorthstarAssist-HarnessAnswers",
+            "filterPattern": "{ ($.identity.arn = \"*AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao*\") && ($.operation = \"ConverseStream\") && ($.output.outputBodyJson.stopReason = \"end_turn\") }",
+            "metricTransformations": [
+                {
+                    "metricName": "HarnessAnswers",
+                    "metricNamespace": "Northstar/Assist",
+                    "metricValue": "1",
+                    "defaultValue": 0.0,
+                    "unit": "Count"
+                }
+            ],
+            "creationTime": 1791668137292,
+            "logGroupName": "/northstar/bedrock/invocations",
+            "applyOnTransformedLogs": false
+        },
+        {
+            "filterName": "NorthstarAssist-HarnessMaskedAnswers",
+            "filterPattern": "\"AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao\" \"\\\"stopReason\\\":\\\"guardrail_intervened\\\"\" \"\\\"action\\\":\\\"ANONYMIZED\\\"\" -\"\\\"action\\\":\\\"BLOCKED\\\"\"",
+            "metricTransformations": [
+                {
+                    "metricName": "HarnessAnswers",
+                    "metricNamespace": "Northstar/Assist",
+                    "metricValue": "1",
+                    "defaultValue": 0.0,
+                    "unit": "Count"
+                }
+            ],
+            "creationTime": 1791668138018,
+            "logGroupName": "/northstar/bedrock/invocations",
+            "applyOnTransformedLogs": false
+        },
+        {
+            "filterName": "NorthstarAssist-HarnessToolCalls",
+            "filterPattern": "{ ($.identity.arn = \"*AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao*\") && ($.output.outputBodyJson.stopReason = \"tool_use\") }",
+            "metricTransformations": [
+                {
+                    "metricName": "HarnessToolCalls",
+                    "metricNamespace": "Northstar/Assist",
+                    "metricValue": "1",
+                    "defaultValue": 0.0,
+                    "unit": "Count"
+                }
+            ],
+            "creationTime": 1791668138733,
+            "logGroupName": "/northstar/bedrock/invocations",
+            "applyOnTransformedLogs": false
+        },
+        {
+            "filterName": "NorthstarAssist-InputTokens",
+            "filterPattern": "{ ($.identity.arn = \"*AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao*\") && ($.input.inputTokenCount > 0) }",
+            "metricTransformations": [
+                {
+                    "metricName": "InputTokens",
+                    "metricNamespace": "Northstar/Assist",
+                    "metricValue": "$.input.inputTokenCount",
+                    "unit": "Count"
+                }
+            ],
+            "creationTime": 1791668140929,
+            "logGroupName": "/northstar/bedrock/invocations",
+            "applyOnTransformedLogs": false
+        },
+        {
+            "filterName": "NorthstarAssist-KbRetrievals",
+            "filterPattern": "{ ($.identity.arn = \"*AmazonBedrockExecutionRoleForKnowledgeBase_x7ne0*\") && ($.operation = \"InvokeModel\") }",
+            "metricTransformations": [
+                {
+                    "metricName": "KbRetrievals",
+                    "metricNamespace": "Northstar/Assist",
+                    "metricValue": "1",
+                    "defaultValue": 0.0,
+                    "unit": "Count"
+                }
+            ],
+            "creationTime": 1791668139439,
+            "logGroupName": "/northstar/bedrock/invocations",
+            "applyOnTransformedLogs": false
+        },
+        {
+            "filterName": "NorthstarAssist-OutputTokens",
+            "filterPattern": "{ ($.identity.arn = \"*AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao*\") && ($.output.outputTokenCount > 0) }",
+            "metricTransformations": [
+                {
+                    "metricName": "OutputTokens",
+                    "metricNamespace": "Northstar/Assist",
+                    "metricValue": "$.output.outputTokenCount",
+                    "unit": "Count"
+                }
+            ],
+            "creationTime": 1791668140201,
+            "logGroupName": "/northstar/bedrock/invocations",
+            "applyOnTransformedLogs": false
+        },
+        {
+            "filterName": "NorthstarAssist-PromptAttackBlocks",
+            "filterPattern": "\"AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao\" \"\\\"type\\\":\\\"PROMPT_ATTACK\\\"\" \"\\\"action\\\":\\\"BLOCKED\\\"\"",
+            "metricTransformations": [
+                {
+                    "metricName": "PromptAttackBlocks",
+                    "metricNamespace": "Northstar/Assist",
+                    "metricValue": "1",
+                    "defaultValue": 0.0,
+                    "unit": "Count"
+                }
+            ],
+            "creationTime": 1791668135154,
+            "logGroupName": "/northstar/bedrock/invocations",
+            "applyOnTransformedLogs": false
+        },
+        {
+            "filterName": "NorthstarAssist-SensitiveInfoActions",
+            "filterPattern": "\"AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao\" \"\\\"sensitiveInformationPolicy\\\"\"",
+            "metricTransformations": [
+                {
+                    "metricName": "SensitiveInfoActions",
+                    "metricNamespace": "Northstar/Assist",
+                    "metricValue": "1",
+                    "defaultValue": 0.0,
+                    "unit": "Count"
+                }
+            ],
+            "creationTime": 1791668136588,
+            "logGroupName": "/northstar/bedrock/invocations",
+            "applyOnTransformedLogs": false
+        },
+        {
+            "filterName": "NorthstarAssist-UnguardedHarnessCalls",
+            "filterPattern": "{ ($.identity.arn = \"*AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao*\") && ($.output.outputBodyJson.trace.guardrail.inputAssessment NOT EXISTS) && ($.errorCode NOT EXISTS) }",
+            "metricTransformations": [
+                {
+                    "metricName": "UnguardedHarnessCalls",
+                    "metricNamespace": "Northstar/Assist",
+                    "metricValue": "1",
+                    "defaultValue": 0.0,
+                    "unit": "Count"
+                }
+            ],
+            "creationTime": 1791668141638,
+            "logGroupName": "/northstar/bedrock/invocations",
+            "applyOnTransformedLogs": false
+        }
+    ]
+}

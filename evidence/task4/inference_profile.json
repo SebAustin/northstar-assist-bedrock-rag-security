@@ -1,0 +1,21 @@
+{
+    "inferenceProfileName": "US Anthropic Claude Haiku 4.5",
+    "description": "Routes requests to Anthropic Claude Haiku 4.5 in us-east-1, us-east-2 and us-west-2.",
+    "createdAt": "2025-10-13T19:47:28.632000+00:00",
+    "updatedAt": "2026-09-23T00:19:33.808000+00:00",
+    "inferenceProfileArn": "arn:aws:bedrock:us-east-1:609617804976:inference-profile/us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "models": [
+        {
+            "modelArn": "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-haiku-4-5-20251001-v1:0"
+        },
+        {
+            "modelArn": "arn:aws:bedrock:us-east-2::foundation-model/anthropic.claude-haiku-4-5-20251001-v1:0"
+        },
+        {
+            "modelArn": "arn:aws:bedrock:us-west-2::foundation-model/anthropic.claude-haiku-4-5-20251001-v1:0"
+        }
+    ],
+    "inferenceProfileId": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "status": "ACTIVE",
+    "type": "SYSTEM_DEFINED"
+}

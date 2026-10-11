@@ -1,0 +1,32 @@
+{
+    "queryLanguage": "CWLI",
+    "results": [
+        [
+            {
+                "field": "@timestamp",
+                "value": "2026-10-10 22:49:55.045"
+            },
+            {
+                "field": "event.document_title",
+                "value": "northstar_test_poisoned_faq.txt"
+            },
+            {
+                "field": "event.crawl_action",
+                "value": "ADD"
+            },
+            {
+                "field": "@ptr",
+                "value": "CswBCpIBCk82MDk2MTc4MDQ5NzY6L2F3cy92ZW5kZWRsb2dzL2JlZHJvY2sva25vd2xlZGdlLWJhc2UvQVBQTElDQVRJT05fTE9HUy9XVVdIWkMwNk1QEAAaJDg4Mzc5ZWYxLTQ3MmEtNDg2NS05OGRiLWZhMGJlNWEyMmJmZCIOCJjrqL+SNBC/4ZbAkjRA29bVuZI0SAASNRoYAgarPJZOAAAAAE9+kPoABqysDFAAAAXiIAEo5eSIwJI0MOXkiMCSNDgBQPwJSKcnUOgVEAAYAQ=="
+            }
+        ]
+    ],
+    "statistics": {
+        "recordsMatched": 1.0,
+        "recordsScanned": 34.0,
+        "estimatedRecordsSkipped": 0.0,
+        "bytesScanned": 41245.0,
+        "estimatedBytesSkipped": 0.0,
+        "logGroupsScanned": 1.0
+    },
+    "status": "Complete"
+}

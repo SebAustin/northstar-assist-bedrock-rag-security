@@ -1,0 +1,36 @@
+{
+    "Role": {
+        "Path": "/service-role/",
+        "RoleName": "AmazonBedrockExecutionRoleForKnowledgeBase_x7ne0",
+        "RoleId": "AROAY34ANP2YNTTNXSDEM",
+        "Arn": "arn:aws:iam::609617804976:role/service-role/AmazonBedrockExecutionRoleForKnowledgeBase_x7ne0",
+        "CreateDate": "2026-10-10T19:05:53+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "TrustPolicyStatement",
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "bedrock.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole",
+                    "Condition": {
+                        "StringEquals": {
+                            "aws:SourceAccount": "609617804976"
+                        },
+                        "ArnLike": {
+                            "aws:SourceArn": "arn:aws:bedrock:us-east-1:609617804976:knowledge-base/*"
+                        }
+                    }
+                }
+            ]
+        },
+        "Description": "Bedrock Knowledge Base access",
+        "MaxSessionDuration": 3600,
+        "RoleLastUsed": {
+            "LastUsedDate": "2026-10-10T20:04:17+00:00",
+            "Region": "us-east-1"
+        }
+    }
+}

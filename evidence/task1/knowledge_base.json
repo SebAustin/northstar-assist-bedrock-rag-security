@@ -1,0 +1,24 @@
+{
+    "knowledgeBase": {
+        "knowledgeBaseId": "WUWHZC06MP",
+        "name": "northstar-assist-kb",
+        "knowledgeBaseArn": "arn:aws:bedrock:us-east-1:609617804976:knowledge-base/WUWHZC06MP",
+        "roleArn": "arn:aws:iam::609617804976:role/service-role/AmazonBedrockExecutionRoleForKnowledgeBase_x7ne0",
+        "knowledgeBaseConfiguration": {
+            "type": "MANAGED",
+            "managedKnowledgeBaseConfiguration": {
+                "embeddingModelType": "CUSTOM",
+                "embeddingModelArn": "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0",
+                "embeddingModelConfiguration": {
+                    "bedrockEmbeddingModelConfiguration": {
+                        "dimensions": 1024,
+                        "embeddingDataType": "FLOAT32"
+                    }
+                }
+            }
+        },
+        "status": "ACTIVE",
+        "createdAt": "2026-10-10T19:06:11.362673+00:00",
+        "updatedAt": "2026-10-10T19:06:11.362673+00:00"
+    }
+}

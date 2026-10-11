@@ -1,0 +1,33 @@
+{
+    "Versions": [
+        {
+            "ETag": "\"a4d2de7f095b9079195f0db8f9541df3\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 1080,
+            "StorageClass": "STANDARD",
+            "Key": "test/northstar_test_poisoned_faq.txt",
+            "VersionId": "94Uk1JR0oEk.Zis50kkPKOCdarQYdHOW",
+            "IsLatest": false,
+            "LastModified": "2026-10-10T22:47:23+00:00",
+            "Owner": {
+                "ID": "8dc9104db5c3f49a7eab01353bb744f4eb6635bf28f65067977e5c703cfeb45c"
+            }
+        }
+    ],
+    "DeleteMarkers": [
+        {
+            "Owner": {
+                "ID": "8dc9104db5c3f49a7eab01353bb744f4eb6635bf28f65067977e5c703cfeb45c"
+            },
+            "Key": "test/northstar_test_poisoned_faq.txt",
+            "VersionId": "RmQsO11bt7NR.0qrI2AaQw1g3_ljDGkU",
+            "IsLatest": true,
+            "LastModified": "2026-10-10T22:52:19+00:00"
+        }
+    ],
+    "RequestCharged": null,
+    "Prefix": "test/northstar_test_poisoned_faq.txt"
+}

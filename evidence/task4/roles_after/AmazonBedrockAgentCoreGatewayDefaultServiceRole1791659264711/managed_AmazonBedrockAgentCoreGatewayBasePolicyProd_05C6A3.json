@@ -1,0 +1,18 @@
+{
+    "PolicyVersion": {
+        "Document": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "GetNorthstarGateway",
+                    "Effect": "Allow",
+                    "Action": "bedrock-agentcore:GetGateway",
+                    "Resource": "arn:aws:bedrock-agentcore:us-east-1:609617804976:gateway/northstar-assist-gateway-hd1uvsa8f3"
+                }
+            ]
+        },
+        "VersionId": "v4",
+        "IsDefaultVersion": true,
+        "CreateDate": "2026-10-10T20:59:58+00:00"
+    }
+}

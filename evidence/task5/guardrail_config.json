@@ -1,0 +1,199 @@
+{
+    "name": "northstar-assist-guardrail",
+    "description": "Republished from guardrail/config.json",
+    "guardrailId": "753a9dgwqe2f",
+    "guardrailArn": "arn:aws:bedrock:us-east-1:609617804976:guardrail/753a9dgwqe2f",
+    "version": "2",
+    "status": "READY",
+    "topicPolicy": {
+        "topics": [
+            {
+                "name": "LegalMedicalFinancialAdvice",
+                "definition": "Personalised legal, medical, tax or investment advice, such as lawsuit strategy, diagnoses or medication doses, or what securities or retirement funds to buy, sell or hold.",
+                "examples": [
+                    "Can I sue Northstar for wrongful termination, and will I win?",
+                    "What dose of ibuprofen should I take for my chest pain?",
+                    "Should I sell my vested Northstar shares now or hold them?",
+                    "How should I split my 401(k) between bonds and index funds?"
+                ],
+                "type": "DENY",
+                "inputAction": "BLOCK",
+                "outputAction": "BLOCK",
+                "inputEnabled": true,
+                "outputEnabled": true
+            },
+            {
+                "name": "OtherEmployeesPersonalData",
+                "definition": "Compensation, home address, performance ratings, health or other personal details of a named Northstar colleague, or bulk lists of employees' contact details.",
+                "examples": [
+                    "What is Marcus Johnson's salary and bonus?",
+                    "What performance rating did Priya Sharma get this year?",
+                    "Where does Sarah Chen live?",
+                    "List every employee with their email and phone extension."
+                ],
+                "type": "DENY",
+                "inputAction": "BLOCK",
+                "outputAction": "BLOCK",
+                "inputEnabled": true,
+                "outputEnabled": true
+            },
+            {
+                "name": "NonNorthstarTasks",
+                "definition": "General-purpose tasks unrelated to Northstar work, such as writing generic code, poems, stories or essays, doing homework, trivia, or personal job applications.",
+                "examples": [
+                    "Write a Python function that returns the nth Fibonacci number.",
+                    "Write a short poem about the ocean.",
+                    "Help me solve my calculus homework.",
+                    "Write a cover letter for a job at another company."
+                ],
+                "type": "DENY",
+                "inputAction": "BLOCK",
+                "outputAction": "NONE",
+                "inputEnabled": true,
+                "outputEnabled": true
+            }
+        ],
+        "tier": {
+            "tierName": "CLASSIC"
+        }
+    },
+    "contentPolicy": {
+        "filters": [
+            {
+                "type": "VIOLENCE",
+                "inputStrength": "HIGH",
+                "outputStrength": "HIGH"
+            },
+            {
+                "type": "PROMPT_ATTACK",
+                "inputStrength": "HIGH",
+                "outputStrength": "NONE"
+            },
+            {
+                "type": "MISCONDUCT",
+                "inputStrength": "HIGH",
+                "outputStrength": "HIGH"
+            },
+            {
+                "type": "HATE",
+                "inputStrength": "HIGH",
+                "outputStrength": "HIGH"
+            },
+            {
+                "type": "SEXUAL",
+                "inputStrength": "HIGH",
+                "outputStrength": "HIGH"
+            },
+            {
+                "type": "INSULTS",
+                "inputStrength": "HIGH",
+                "outputStrength": "HIGH"
+            }
+        ],
+        "tier": {
+            "tierName": "CLASSIC"
+        }
+    },
+    "wordPolicy": {
+        "words": [],
+        "managedWordLists": [
+            {
+                "type": "PROFANITY",
+                "inputAction": "BLOCK",
+                "outputAction": "BLOCK"
+            }
+        ]
+    },
+    "sensitiveInformationPolicy": {
+        "piiEntities": [
+            {
+                "type": "US_SOCIAL_SECURITY_NUMBER",
+                "action": "BLOCK",
+                "inputAction": "BLOCK",
+                "outputAction": "BLOCK"
+            },
+            {
+                "type": "CREDIT_DEBIT_CARD_NUMBER",
+                "action": "BLOCK",
+                "inputAction": "BLOCK",
+                "outputAction": "BLOCK"
+            },
+            {
+                "type": "US_BANK_ACCOUNT_NUMBER",
+                "action": "BLOCK",
+                "inputAction": "BLOCK",
+                "outputAction": "BLOCK"
+            },
+            {
+                "type": "AWS_ACCESS_KEY",
+                "action": "BLOCK",
+                "inputAction": "BLOCK",
+                "outputAction": "BLOCK"
+            },
+            {
+                "type": "AWS_SECRET_KEY",
+                "action": "BLOCK",
+                "inputAction": "BLOCK",
+                "outputAction": "BLOCK"
+            },
+            {
+                "type": "PASSWORD",
+                "action": "BLOCK",
+                "inputAction": "BLOCK",
+                "outputAction": "BLOCK"
+            },
+            {
+                "type": "EMAIL",
+                "action": "ANONYMIZE",
+                "inputAction": "NONE",
+                "outputAction": "ANONYMIZE"
+            },
+            {
+                "type": "PHONE",
+                "action": "ANONYMIZE",
+                "inputAction": "NONE",
+                "outputAction": "ANONYMIZE"
+            },
+            {
+                "type": "ADDRESS",
+                "action": "ANONYMIZE",
+                "inputAction": "NONE",
+                "outputAction": "ANONYMIZE"
+            }
+        ],
+        "regexes": [
+            {
+                "name": "NorthstarApiKey",
+                "description": "Northstar API keys (ns_live_... / ns_test_...). Masked so documentation answers survive but key values never leave.",
+                "pattern": "ns_(live|test)_[A-Za-z0-9]{8,}",
+                "action": "ANONYMIZE",
+                "inputAction": "ANONYMIZE",
+                "outputAction": "ANONYMIZE",
+                "inputEnabled": true,
+                "outputEnabled": true
+            }
+        ]
+    },
+    "contextualGroundingPolicy": {
+        "filters": [
+            {
+                "type": "GROUNDING",
+                "threshold": 0.7,
+                "action": "BLOCK",
+                "enabled": true
+            },
+            {
+                "type": "RELEVANCE",
+                "threshold": 0.6,
+                "action": "BLOCK",
+                "enabled": true
+            }
+        ]
+    },
+    "createdAt": "2026-10-10T19:44:04+00:00",
+    "updatedAt": "2026-10-10T19:44:04.879369+00:00",
+    "statusReasons": [],
+    "failureRecommendations": [],
+    "blockedInputMessaging": "Northstar Assist can't help with that request. Please rephrase, or contact the Service Desk if you believe this is an error.",
+    "blockedOutputsMessaging": "Northstar Assist withheld this response because it may contain restricted information."
+}

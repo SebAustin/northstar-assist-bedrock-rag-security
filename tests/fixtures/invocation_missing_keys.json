@@ -1,0 +1,6 @@
+{
+  "_note": "Synthetic fixture shaped after the documented Bedrock model-invocation-log schema. Field names MUST be re-validated against real log lines (PLAN R2) before relying on them.",
+  "schemaType": "ModelInvocationLog",
+  "operation": "Converse",
+  "output": null
+}

@@ -1,0 +1,68 @@
+{
+    "harness": {
+        "harnessId": "NorthstarAssist-XSASd9gyWX",
+        "harnessName": "NorthstarAssist",
+        "arn": "arn:aws:bedrock-agentcore:us-east-1:609617804976:harness/NorthstarAssist-XSASd9gyWX",
+        "status": "READY",
+        "harnessVersion": "1",
+        "executionRoleArn": "arn:aws:iam::609617804976:role/service-role/AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao",
+        "createdAt": "2026-10-10T19:22:57.470784+00:00",
+        "updatedAt": "2026-10-10T19:23:18.767689+00:00",
+        "model": {
+            "bedrockModelConfig": {
+                "modelId": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+                "apiFormat": "converse_stream"
+            }
+        },
+        "systemPrompt": [
+            {
+                "text": "You are Northstar Assist, Northstar Technologies' internal employee assistant. Your job is to help Northstar employees find accurate answers to questions about company policies, procedures, and internal documentation. Always search the Northstar knowledge base tool before answering a question about Northstar. Base your answers only on the retrieved documents and name the source document you used. Do not make up policy details. If the knowledge base does not contain relevant information, say so clearly. Do not guess. Do not discuss topics unrelated to Northstar operations."
+            }
+        ],
+        "tools": [
+            {
+                "type": "agentcore_gateway",
+                "name": "northstar-assist-gateway",
+                "config": {
+                    "agentCoreGateway": {
+                        "gatewayArn": "arn:aws:bedrock-agentcore:us-east-1:609617804976:gateway/northstar-assist-gateway-hd1uvsa8f3",
+                        "outboundAuth": {
+                            "awsIam": {}
+                        }
+                    }
+                }
+            }
+        ],
+        "skills": [],
+        "allowedTools": [
+            "*"
+        ],
+        "truncation": {
+            "strategy": "sliding_window",
+            "config": {
+                "slidingWindow": {
+                    "messagesCount": 150
+                }
+            }
+        },
+        "environment": {
+            "agentCoreRuntimeEnvironment": {
+                "agentRuntimeArn": "arn:aws:bedrock-agentcore:us-east-1:609617804976:runtime/harness_NorthstarAssist-92Prr07JAK",
+                "agentRuntimeName": "harness_NorthstarAssist",
+                "agentRuntimeId": "harness_NorthstarAssist-92Prr07JAK",
+                "lifecycleConfiguration": {
+                    "idleRuntimeSessionTimeout": 900,
+                    "maxLifetime": 28800
+                },
+                "networkConfiguration": {
+                    "networkMode": "PUBLIC"
+                }
+            }
+        },
+        "memory": {
+            "disabled": {}
+        },
+        "maxIterations": 75,
+        "timeoutSeconds": 3600
+    }
+}

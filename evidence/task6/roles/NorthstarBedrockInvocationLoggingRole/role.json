@@ -1,0 +1,41 @@
+{
+    "Role": {
+        "Path": "/",
+        "RoleName": "NorthstarBedrockInvocationLoggingRole",
+        "RoleId": "AROAY34ANP2YFIRT7VL6R",
+        "Arn": "arn:aws:iam::609617804976:role/NorthstarBedrockInvocationLoggingRole",
+        "CreateDate": "2026-10-10T21:29:56+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "bedrock.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole",
+                    "Condition": {
+                        "StringEquals": {
+                            "aws:SourceAccount": "609617804976"
+                        },
+                        "ArnLike": {
+                            "aws:SourceArn": "arn:aws:bedrock:us-east-1:609617804976:*"
+                        }
+                    }
+                }
+            ]
+        },
+        "Description": "Lets Bedrock write model-invocation logs to /northstar/bedrock/invocations only",
+        "MaxSessionDuration": 3600,
+        "Tags": [
+            {
+                "Key": "project",
+                "Value": "northstar-assist"
+            }
+        ],
+        "RoleLastUsed": {
+            "LastUsedDate": "2026-10-10T22:49:14+00:00",
+            "Region": "us-east-1"
+        }
+    }
+}

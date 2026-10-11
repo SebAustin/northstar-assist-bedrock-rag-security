@@ -1,0 +1,131 @@
+{
+    "MetricAlarms": [
+        {
+            "AlarmName": "NorthstarAssist-PromptAttackSpike",
+            "AlarmArn": "arn:aws:cloudwatch:us-east-1:609617804976:alarm:NorthstarAssist-PromptAttackSpike",
+            "AlarmDescription": "More than 5 prompt-attack blocks in 1 hour. Run the saved query 'NorthstarAssist: prompt-attack blocks by session' to see whether one session is responsible, then follow the prompt-injection playbook.",
+            "AlarmConfigurationUpdatedTimestamp": "2026-10-10T17:30:03.755000-05:00",
+            "ActionsEnabled": true,
+            "OKActions": [],
+            "AlarmActions": [],
+            "InsufficientDataActions": [],
+            "StateValue": "ALARM",
+            "StateReason": "Threshold Crossed: 1 datapoint [7.0 (10/10/26 20:37:00)] was greater than the threshold (5.0).",
+            "StateReasonData": "{\"version\":\"1.0\",\"queryDate\":\"2026-10-10T21:37:29.631+0000\",\"startDate\":\"2026-10-10T20:37:00.000+0000\",\"statistic\":\"Sum\",\"period\":3600,\"recentDatapoints\":[7.0],\"threshold\":5.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-10-10T20:37:00.000+0000\",\"sampleCount\":7.0,\"value\":7.0}]}",
+            "StateUpdatedTimestamp": "2026-10-10T16:37:29.631000-05:00",
+            "MetricName": "PromptAttackBlocks",
+            "Namespace": "Northstar/Assist",
+            "Statistic": "Sum",
+            "Dimensions": [],
+            "Period": 3600,
+            "EvaluationPeriods": 1,
+            "Threshold": 5.0,
+            "ComparisonOperator": "GreaterThanThreshold",
+            "TreatMissingData": "notBreaching",
+            "StateTransitionedTimestamp": "2026-10-10T16:37:29.631000-05:00"
+        },
+        {
+            "AlarmName": "NorthstarAssist-TokenSpike",
+            "AlarmArn": "arn:aws:cloudwatch:us-east-1:609617804976:alarm:NorthstarAssist-TokenSpike",
+            "AlarmDescription": "A single model call produced more than 542 output tokens (3 x benign p95). Bulk data disclosure or a runaway response. The largest answer in the hardened test run was 322 tokens; before hardening, the only calls above this level were two failed test cases, including the employee-directory dump.",
+            "AlarmConfigurationUpdatedTimestamp": "2026-10-10T17:57:28.585000-05:00",
+            "ActionsEnabled": true,
+            "OKActions": [],
+            "AlarmActions": [],
+            "InsufficientDataActions": [],
+            "StateValue": "OK",
+            "StateReason": "Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].",
+            "StateReasonData": "{\"version\":\"1.0\",\"queryDate\":\"2026-10-10T21:36:54.247+0000\",\"statistic\":\"Maximum\",\"period\":300,\"recentDatapoints\":[],\"threshold\":784.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-10-10T21:31:00.000+0000\"}]}",
+            "StateUpdatedTimestamp": "2026-10-10T16:36:54.249000-05:00",
+            "MetricName": "OutputTokens",
+            "Namespace": "Northstar/Assist",
+            "Statistic": "Maximum",
+            "Dimensions": [],
+            "Period": 300,
+            "EvaluationPeriods": 1,
+            "Threshold": 542.0,
+            "ComparisonOperator": "GreaterThanThreshold",
+            "TreatMissingData": "notBreaching",
+            "StateTransitionedTimestamp": "2026-10-10T16:36:54.249000-05:00"
+        },
+        {
+            "AlarmName": "NorthstarAssist-UnguardedHarnessCall",
+            "AlarmArn": "arn:aws:cloudwatch:us-east-1:609617804976:alarm:NorthstarAssist-UnguardedHarnessCall",
+            "AlarmDescription": "A harness model call completed with no guardrail assessment in its trace. The IAM guardrail condition has been removed or bypassed. Treat as a security incident.",
+            "AlarmConfigurationUpdatedTimestamp": "2026-10-10T16:36:00.869000-05:00",
+            "ActionsEnabled": true,
+            "OKActions": [],
+            "AlarmActions": [],
+            "InsufficientDataActions": [],
+            "StateValue": "OK",
+            "StateReason": "Threshold Crossed: 1 datapoint [0.0 (10/10/26 21:32:00)] was not greater than the threshold (0.0).",
+            "StateReasonData": "{\"version\":\"1.0\",\"queryDate\":\"2026-10-10T21:37:09.838+0000\",\"startDate\":\"2026-10-10T21:32:00.000+0000\",\"statistic\":\"Sum\",\"period\":300,\"recentDatapoints\":[0.0],\"threshold\":0.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-10-10T21:32:00.000+0000\",\"sampleCount\":7.0,\"value\":0.0}]}",
+            "StateUpdatedTimestamp": "2026-10-10T16:37:09.839000-05:00",
+            "MetricName": "UnguardedHarnessCalls",
+            "Namespace": "Northstar/Assist",
+            "Statistic": "Sum",
+            "Dimensions": [],
+            "Period": 300,
+            "EvaluationPeriods": 1,
+            "Threshold": 0.0,
+            "ComparisonOperator": "GreaterThanThreshold",
+            "TreatMissingData": "notBreaching",
+            "StateTransitionedTimestamp": "2026-10-10T16:37:09.839000-05:00"
+        },
+        {
+            "AlarmName": "NorthstarAssist-ZeroRetrievalRatio",
+            "AlarmArn": "arn:aws:cloudwatch:us-east-1:609617804976:alarm:NorthstarAssist-ZeroRetrievalRatio",
+            "AlarmDescription": "More than 20% of answers in 1 hour were delivered without a Retrieve tool call (minimum 10 answers). Ungrounded answers, or an attack steering the model away from the knowledge base.",
+            "AlarmConfigurationUpdatedTimestamp": "2026-10-10T16:35:59.413000-05:00",
+            "ActionsEnabled": true,
+            "OKActions": [],
+            "AlarmActions": [],
+            "InsufficientDataActions": [],
+            "StateValue": "OK",
+            "StateReason": "Threshold Crossed: 1 datapoint [14.634146341463417 (10/10/26 21:51:00)] was not greater than the threshold (20.0).",
+            "StateReasonData": "{\"version\":\"1.0\",\"queryDate\":\"2026-10-10T22:51:36.496+0000\",\"startDate\":\"2026-10-10T21:51:00.000+0000\",\"period\":3600,\"recentDatapoints\":[14.634146341463417],\"threshold\":20.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-10-10T21:51:00.000+0000\",\"value\":14.634146341463417}]}",
+            "StateUpdatedTimestamp": "2026-10-10T17:51:36.498000-05:00",
+            "Dimensions": [],
+            "EvaluationPeriods": 1,
+            "Threshold": 20.0,
+            "ComparisonOperator": "GreaterThanThreshold",
+            "TreatMissingData": "notBreaching",
+            "Metrics": [
+                {
+                    "Id": "answers",
+                    "MetricStat": {
+                        "Metric": {
+                            "Namespace": "Northstar/Assist",
+                            "MetricName": "HarnessAnswers",
+                            "Dimensions": []
+                        },
+                        "Period": 3600,
+                        "Stat": "Sum"
+                    },
+                    "ReturnData": false
+                },
+                {
+                    "Id": "tools",
+                    "MetricStat": {
+                        "Metric": {
+                            "Namespace": "Northstar/Assist",
+                            "MetricName": "HarnessToolCalls",
+                            "Dimensions": []
+                        },
+                        "Period": 3600,
+                        "Stat": "Sum"
+                    },
+                    "ReturnData": false
+                },
+                {
+                    "Id": "zero_retrieval_pct",
+                    "Expression": "IF(answers >= 10, IF(tools >= answers, 0, 100 * (1 - tools / answers)), 0)",
+                    "Label": "Answers without retrieval (%)",
+                    "ReturnData": true
+                }
+            ],
+            "StateTransitionedTimestamp": "2026-10-10T17:51:36.498000-05:00"
+        }
+    ],
+    "CompositeAlarms": []
+}

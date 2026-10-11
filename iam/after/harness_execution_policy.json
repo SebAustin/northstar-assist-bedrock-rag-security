@@ -1,0 +1,135 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "InvokeHaikuInferenceProfileOnly",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream"
+      ],
+      "Resource": "arn:aws:bedrock:us-east-1:609617804976:inference-profile/us.anthropic.claude-haiku-4-5-20251001-v1:0"
+    },
+    {
+      "Sid": "InvokeHaikuFoundationModelOnlyThroughTheProfile",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream"
+      ],
+      "Resource": [
+        "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-haiku-4-5-20251001-v1:0",
+        "arn:aws:bedrock:us-east-2::foundation-model/anthropic.claude-haiku-4-5-20251001-v1:0",
+        "arn:aws:bedrock:us-west-2::foundation-model/anthropic.claude-haiku-4-5-20251001-v1:0"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "bedrock:InferenceProfileArn": "arn:aws:bedrock:us-east-1:609617804976:inference-profile/us.anthropic.claude-haiku-4-5-20251001-v1:0"
+        }
+      }
+    },
+    {
+      "Sid": "DenyModelInvocationWithoutNorthstarGuardrail",
+      "Effect": "Deny",
+      "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "bedrock:GuardrailIdentifier": [
+            "arn:aws:bedrock:us-east-1:609617804976:guardrail/753a9dgwqe2f:2",
+            "arn:aws:bedrock:us-east-1:609617804976:guardrail/1oom74pzn70o:2"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "EcrPublicTokenAccess",
+      "Effect": "Allow",
+      "Action": "ecr-public:GetAuthorizationToken",
+      "Resource": "*"
+    },
+    {
+      "Sid": "StsForEcrPublicPull",
+      "Effect": "Allow",
+      "Action": "sts:GetServiceBearerToken",
+      "Resource": "*"
+    },
+    {
+      "Sid": "EcrManagedImagePull",
+      "Effect": "Allow",
+      "Action": [
+        "ecr:BatchGetImage",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:BatchCheckLayerAvailability"
+      ],
+      "Resource": "arn:aws:ecr:us-east-1:*:repository/harness-*"
+    },
+    {
+      "Sid": "EcrManagedImageToken",
+      "Effect": "Allow",
+      "Action": "ecr:GetAuthorizationToken",
+      "Resource": "*"
+    },
+    {
+      "Sid": "XRayTracingAccess",
+      "Effect": "Allow",
+      "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords",
+        "xray:GetSamplingRules",
+        "xray:GetSamplingTargets"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudWatchLogsOwnGroup",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:DescribeLogStreams"
+      ],
+      "Resource": "arn:aws:logs:us-east-1:609617804976:log-group:/aws/bedrock-agentcore/runtimes/harness_NorthstarAssist-92Prr07JAK-*"
+    },
+    {
+      "Sid": "CloudWatchLogsDescribeGroups",
+      "Effect": "Allow",
+      "Action": "logs:DescribeLogGroups",
+      "Resource": "arn:aws:logs:us-east-1:609617804976:log-group:*"
+    },
+    {
+      "Sid": "CloudWatchLogsOwnStreams",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:us-east-1:609617804976:log-group:/aws/bedrock-agentcore/runtimes/harness_NorthstarAssist-92Prr07JAK-*:log-stream:*"
+    },
+    {
+      "Sid": "CloudWatchMetricsPublish",
+      "Effect": "Allow",
+      "Action": "cloudwatch:PutMetricData",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "cloudwatch:namespace": "bedrock-agentcore"
+        }
+      }
+    },
+    {
+      "Sid": "AgentCoreWorkloadIdentity",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock-agentcore:GetWorkloadAccessToken",
+        "bedrock-agentcore:GetWorkloadAccessTokenForJWT"
+      ],
+      "Resource": [
+        "arn:aws:bedrock-agentcore:us-east-1:609617804976:workload-identity-directory/default",
+        "arn:aws:bedrock-agentcore:us-east-1:609617804976:workload-identity-directory/default/workload-identity/harness_NorthstarAssist-*"
+      ]
+    }
+  ]
+}

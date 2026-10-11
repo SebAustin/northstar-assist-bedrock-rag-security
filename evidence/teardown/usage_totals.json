@@ -1,0 +1,6 @@
+{
+  "recorded_runs": 238,
+  "input_tokens": 560233,
+  "output_tokens": 35640,
+  "source": "results/suite_*.jsonl (final-call usage reported by the harness stream; rescored files repeat the same runs, so this over-counts)"
+}

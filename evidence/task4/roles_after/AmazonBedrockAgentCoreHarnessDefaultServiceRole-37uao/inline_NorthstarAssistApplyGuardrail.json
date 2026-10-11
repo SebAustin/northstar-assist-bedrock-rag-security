@@ -1,0 +1,18 @@
+{
+    "RoleName": "AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao",
+    "PolicyName": "NorthstarAssistApplyGuardrail",
+    "PolicyDocument": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "ApplyNorthstarGuardrail",
+                "Effect": "Allow",
+                "Action": "bedrock:ApplyGuardrail",
+                "Resource": [
+                    "arn:aws:bedrock:us-east-1:609617804976:guardrail/753a9dgwqe2f",
+                    "arn:aws:bedrock:us-east-1:609617804976:guardrail/1oom74pzn70o"
+                ]
+            }
+        ]
+    }
+}

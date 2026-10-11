@@ -1,0 +1,6 @@
+state:              NORMAL
+attached guardrail: arn:aws:bedrock:us-east-1:609617804976:guardrail/753a9dgwqe2f 2
+system prompt:      matches guardrail/system_prompt_v2.txt
+tools:              1
+incident IAM deny:  absent (NorthstarIncidentDenyModelInvocation on AmazonBedrockAgentCoreHarnessDefaultServiceRole-37uao)
+alarms in ALARM:    NorthstarAssist-PromptAttackSpike

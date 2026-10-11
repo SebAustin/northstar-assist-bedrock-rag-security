@@ -1,0 +1,5 @@
+{
+  "log_group": "/aws/bedrock-agentcore/runtimes/harness_NorthstarAssist-92Prr07JAK-DEFAULT",
+  "since": "2026-10-10T16:01:20-05:00",
+  "events_after_hardening": 50
+}

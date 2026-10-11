@@ -1,0 +1,16 @@
+{
+    "logGroups": [
+        {
+            "logGroupName": "/northstar/bedrock/invocations",
+            "creationTime": 1791667794300,
+            "retentionInDays": 7,
+            "metricFilterCount": 11,
+            "arn": "arn:aws:logs:us-east-1:609617804976:log-group:/northstar/bedrock/invocations:*",
+            "storedBytes": 0,
+            "logGroupClass": "STANDARD",
+            "logGroupArn": "arn:aws:logs:us-east-1:609617804976:log-group:/northstar/bedrock/invocations",
+            "deletionProtectionEnabled": false,
+            "bearerTokenAuthenticationEnabled": false
+        }
+    ]
+}

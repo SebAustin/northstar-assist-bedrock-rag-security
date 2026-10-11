@@ -1,0 +1,176 @@
+{
+  "note": "aws logs test-metric-filter, each pattern against 14 real invocation-log records and 3 records derived from real ones",
+  "records": [
+    {
+      "n": 1,
+      "record": "real: harness ConverseStream stop=guardrail_intervened out=0"
+    },
+    {
+      "n": 2,
+      "record": "real: harness ConverseStream stop=guardrail_intervened out=0"
+    },
+    {
+      "n": 3,
+      "record": "real: harness ConverseStream stop=end_turn out=75"
+    },
+    {
+      "n": 4,
+      "record": "real: harness ConverseStream stop=guardrail_intervened out=0"
+    },
+    {
+      "n": 5,
+      "record": "real: harness ConverseStream stop=tool_use out=71"
+    },
+    {
+      "n": 6,
+      "record": "real: kb-role InvokeModel stop=None out=None"
+    },
+    {
+      "n": 7,
+      "record": "real: harness ConverseStream stop=end_turn out=79"
+    },
+    {
+      "n": 8,
+      "record": "real: harness ConverseStream stop=tool_use out=74"
+    },
+    {
+      "n": 9,
+      "record": "real: kb-role InvokeModel stop=None out=None"
+    },
+    {
+      "n": 10,
+      "record": "real: harness ConverseStream stop=guardrail_intervened out=87"
+    },
+    {
+      "n": 11,
+      "record": "real: harness ConverseStream stop=guardrail_intervened out=0"
+    },
+    {
+      "n": 12,
+      "record": "real: harness ConverseStream stop=tool_use out=87"
+    },
+    {
+      "n": 13,
+      "record": "real: kb-role InvokeModel stop=None out=None"
+    },
+    {
+      "n": 14,
+      "record": "real: harness ConverseStream stop=guardrail_intervened out=169"
+    },
+    {
+      "n": 15,
+      "record": "derived: output-side block (masked record, action set to BLOCKED)"
+    },
+    {
+      "n": 16,
+      "record": "derived: unguarded call (answer record, guardrail trace removed)"
+    },
+    {
+      "n": 17,
+      "record": "derived: errored call (no output, errorCode set)"
+    }
+  ],
+  "results": [
+    {
+      "filter": "NorthstarAssist-GuardrailInterventions",
+      "matched": [
+        1,
+        2,
+        4,
+        10,
+        11,
+        14,
+        15
+      ]
+    },
+    {
+      "filter": "NorthstarAssist-PromptAttackBlocks",
+      "matched": [
+        1
+      ]
+    },
+    {
+      "filter": "NorthstarAssist-DeniedTopicBlocks",
+      "matched": [
+        1,
+        2,
+        4,
+        11
+      ]
+    },
+    {
+      "filter": "NorthstarAssist-SensitiveInfoActions",
+      "matched": [
+        10,
+        14,
+        15
+      ]
+    },
+    {
+      "filter": "NorthstarAssist-HarnessAnswers",
+      "matched": [
+        3,
+        7,
+        16
+      ]
+    },
+    {
+      "filter": "NorthstarAssist-HarnessMaskedAnswers",
+      "matched": [
+        10,
+        14
+      ]
+    },
+    {
+      "filter": "NorthstarAssist-HarnessToolCalls",
+      "matched": [
+        5,
+        8,
+        12
+      ]
+    },
+    {
+      "filter": "NorthstarAssist-KbRetrievals",
+      "matched": [
+        6,
+        9,
+        13
+      ]
+    },
+    {
+      "filter": "NorthstarAssist-OutputTokens",
+      "matched": [
+        3,
+        5,
+        7,
+        8,
+        10,
+        12,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "filter": "NorthstarAssist-InputTokens",
+      "matched": [
+        3,
+        5,
+        7,
+        8,
+        10,
+        12,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "filter": "NorthstarAssist-UnguardedHarnessCalls",
+      "matched": [
+        16
+      ]
+    }
+  ]
+}

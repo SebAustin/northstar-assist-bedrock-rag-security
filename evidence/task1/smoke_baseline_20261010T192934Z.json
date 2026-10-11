@@ -1,0 +1,175 @@
+{
+  "prompt": "What is Northstar's hybrid work policy? Name the source document.",
+  "harness_arn": "arn:aws:bedrock-agentcore:us-east-1:609617804976:harness/NorthstarAssist-XSASd9gyWX",
+  "verdict": {
+    "passed": true,
+    "outcome": "ANSWERED_WITH_RETRIEVAL",
+    "reasons": []
+  },
+  "text": "I'll search the Northstar knowledge base for information about the hybrid work policy.Based on the knowledge base search, here is Northstar's hybrid work policy:\n\n**Hybrid Work Policy:**\n\nNorthstar offers a hybrid work arrangement for eligible positions with the following guidelines:\n\n- **Remote Work Allowance:** Employees may work remotely up to 3 days per week\n- **In-Office Requirement:** Minimum 2 days per week in-office (typically Tuesday-Thursday)\n- **Coordination:** Remote work days should be coordinated with team/manager\n- **Fully Remote Positions:** Available for certain roles (as specified in job description)\n\n**Remote Work Requirements:**\nWhen working remotely, employees must have:\n- Reliable high-speed internet connection\n- Dedicated, quiet workspace\n- Availability during core hours (10:00 AM - 3:00 PM) via Slack/email\n- Attendance at scheduled video meetings with camera on\n- Compliance with information security policies\n\n**Source Document:** Company Policies Handbook (company_policies_handbook.html)",
+  "tool_calls": [
+    {
+      "tool_use_id": "tooluse_vkGilVYstWhe7PZRfO6O3c",
+      "name": "northstar-kb___Retrieve",
+      "input": {
+        "retrievalQuery": {
+          "text": "hybrid work policy"
+        }
+      }
+    }
+  ],
+  "tool_results": [
+    {
+      "retrievalResults": [
+        {
+          "content": {
+            "text": "Workplace Guidelines Work Schedule Standard Hours: Monday through Friday, 9:00 AM - 6:00 PM local time Core Hours: 10:00 AM - 3:00 PM (required presence for meetings/collaboration) Flexible Hours: Employees may adjust start/end times with manager approval Hybrid Work Policy Northstar offers a hybrid work arrangement for eligible positions: Employees may work remotely up to 3 days per week Minimum 2 days per week in-office (typically Tuesday-Thursday) Remote work days should be coordinated with team/manager Fully remote positions available for certain roles (as specified in job description) Remote Work Requirements Reliable high-speed internet connection Dedicated, quiet workspace Availability during core hours via Slack/email Attendance at scheduled video meetings with camera on Compliance with information security policies Dress Code Northstar maintains a business casual dress code. When meeting with customers or external partners, business professional attire may be required. Team-specific guidelines may apply. 4. Compensation & Benefits Pay Schedule Employees are paid semi-monthly on the 15th and last day of each month. If a pay date falls on a weekend or holiday, payment will be processed on the preceding business day. Health Benefits Medical Insurance Choice of PPO or HDHP plans through Aetna. Company covers 90% of employee premium and 70% of dependent premiums. Dental & Vision Dental coverage through Delta Dental. Vision coverage through VSP. Company covers 100% of employee premium.",
+            "type": "TEXT"
+          },
+          "documentId": "s3://northstar-assist-kb-5ca661ad/html/company_policies_handbook.html",
+          "location": {
+            "s3Location": {
+              "uri": "https://northstar-assist-kb-5ca661ad.s3.amazonaws.com/html/company_policies_handbook.html"
+            },
+            "type": "S3"
+          },
+          "metadata": {
+            "_file_type": "HTML",
+            "_document_title": "company_policies_handbook.html",
+            "_source_uri": "https://northstar-assist-kb-5ca661ad.s3.amazonaws.com/html/company_policies_handbook.html",
+            "_chunk_id": "bVSrr_vvBRy9NBGgm48L4l3dRRi29kZQQmzwF1V2yyU",
+            "_data_source_type": "S3",
+            "_language_code": "en",
+            "_created_at": "2026-10-09T01:09:29Z",
+            "_last_updated_at": "2026-10-09T01:09:29Z",
+            "_data_source_id": "DR2JEWLD2V"
+          },
+          "score": 0.9456300735473633
+        },
+        {
+          "content": {
+            "text": "13. Policy Review\nAnnually (minimum) After significant security incidents When regulatory requirements change When business operations significantly change Document History\nVersion\tDate\tAuthor\tChanges\n1.0\t2020-01-01\tRyan Hall\tInitial policy\n2.0\t2022-01-15\tRyan Hall\tAdded HIPAA requirements\n2.1\t2022-06-01\tRyan Hall\tUpdated encryption standards\n2.2\t2022-12-01\tRyan Hall\tAdded remote work guidelines\n2.3\t2023-01-15\tRyan Hall\tAnnual review",
+            "type": "TEXT"
+          },
+          "documentId": "s3://northstar-assist-kb-5ca661ad/docx/security_policy.docx",
+          "location": {
+            "s3Location": {
+              "uri": "https://northstar-assist-kb-5ca661ad.s3.amazonaws.com/docx/security_policy.docx"
+            },
+            "type": "S3"
+          },
+          "metadata": {
+            "_file_type": "MS_WORD",
+            "_document_title": "security_policy.docx",
+            "_source_uri": "https://northstar-assist-kb-5ca661ad.s3.amazonaws.com/docx/security_policy.docx",
+            "_chunk_id": "FsfGmIaybJrH0calewF2t8fEEbFpYAUYJCUuf8tunL4",
+            "_data_source_type": "S3",
+            "_excerpt_page_number": 6.0,
+            "_language_code": "en",
+            "_created_at": "2026-10-09T01:09:29Z",
+            "_last_updated_at": "2026-10-09T01:09:29Z",
+            "_data_source_id": "DR2JEWLD2V",
+            "_table_section_title": "13. Policy Review",
+            "_table_id": "m9eh2TUguNQHFZBNeP1BpjE91ZgIbkBNBcCsWi9Pn-4"
+          },
+          "score": 0.9392420053482056
+        },
+        {
+          "content": {
+            "text": "This includes but is not limited to harassment based on race, gender, religion, sexual orientation, disability, or any other protected characteristic. Reporting: Incidents should be reported to your manager, HR, or via our anonymous ethics hotline: 1-800-555-ETHICS Social Media Policy Do not share confidential company information on social media Clearly identify personal opinions as your own, not company views Do not disparage the company, colleagues, customers, or competitors Report any concerns about company-related social media activity to Marketing Substance Policy The use, possession, or distribution of illegal drugs on company premises or during work hours is strictly prohibited. Alcohol may be consumed responsibly at company-sponsored events. Employees should not report to work impaired. 7. Information Security Data Protection All employees are responsible for protecting company and customer data. This includes: Using strong, unique passwords for all accounts Enabling two-factor authentication where available Not sharing credentials with others Locking computers when away from desk Reporting suspected security incidents immediately Acceptable Use of Technology Company-provided equipment and systems should be used primarily for business purposes. Limited personal use is acceptable provided it: Does not interfere with work responsibilities Does not violate company policies or law Does not consume excessive bandwidth or storage Does not expose the company to security risks Confidential Information Employees may have access to confidential information including customer data, financial records, product plans, and trade secrets.",
+            "type": "TEXT"
+          },
+          "documentId": "s3://northstar-assist-kb-5ca661ad/html/company_policies_handbook.html",
+          "location": {
+            "s3Location": {
+              "uri": "https://northstar-assist-kb-5ca661ad.s3.amazonaws.com/html/company_policies_handbook.html"
+            },
+            "type": "S3"
+          },
+          "metadata": {
+            "_file_type": "HTML",
+            "_document_title": "company_policies_handbook.html",
+            "_source_uri": "https://northstar-assist-kb-5ca661ad.s3.amazonaws.com/html/company_policies_handbook.html",
+            "_chunk_id": "PzM8_YNAILsr_OaSQfxkV7-Y0HMC9hMR-PMAphGi_4w",
+            "_data_source_type": "S3",
+            "_language_code": "en",
+            "_created_at": "2026-10-09T01:09:29Z",
+            "_last_updated_at": "2026-10-09T01:09:29Z",
+            "_data_source_id": "DR2JEWLD2V"
+          },
+          "score": 0.9282599091529846
+        },
+        {
+          "content": {
+            "text": "12.2 Security Communications Monthly security newsletter Alerts for emerging threats Lessons learned from incidents (anonymized) 13. Policy Review This policy is reviewed and updated: Annually (minimum) After significant security incidents When regulatory requirements change When business operations significantly change Document History",
+            "type": "TEXT"
+          },
+          "documentId": "s3://northstar-assist-kb-5ca661ad/docx/security_policy.docx",
+          "location": {
+            "s3Location": {
+              "uri": "https://northstar-assist-kb-5ca661ad.s3.amazonaws.com/docx/security_policy.docx"
+            },
+            "type": "S3"
+          },
+          "metadata": {
+            "_file_type": "MS_WORD",
+            "_document_title": "security_policy.docx",
+            "_source_uri": "https://northstar-assist-kb-5ca661ad.s3.amazonaws.com/docx/security_policy.docx",
+            "_chunk_id": "FB1Af56ooiDHBfkEwTwwtiipZJjrNOaPBo4NakFOX24",
+            "_data_source_type": "S3",
+            "_excerpt_page_number": 6.0,
+            "_language_code": "en",
+            "_created_at": "2026-10-09T01:09:29Z",
+            "_last_updated_at": "2026-10-09T01:09:29Z",
+            "_data_source_id": "DR2JEWLD2V"
+          },
+          "score": 0.8888230323791504
+        },
+        {
+          "content": {
+            "text": "Limited personal use is acceptable provided it: Does not interfere with work responsibilities Does not violate company policies or law Does not consume excessive bandwidth or storage Does not expose the company to security risks Confidential Information Employees may have access to confidential information including customer data, financial records, product plans, and trade secrets. This information must: Only be accessed on a need-to-know basis Never be shared outside the company without authorization Be properly secured at all times Be returned to the company upon termination Security Training All employees must complete annual security awareness training. Additional role-specific training may be required. Training records are maintained by IT Security. 8. Resources & Contacts Key Contacts",
+            "type": "TEXT"
+          },
+          "documentId": "s3://northstar-assist-kb-5ca661ad/html/company_policies_handbook.html",
+          "location": {
+            "s3Location": {
+              "uri": "https://northstar-assist-kb-5ca661ad.s3.amazonaws.com/html/company_policies_handbook.html"
+            },
+            "type": "S3"
+          },
+          "metadata": {
+            "_file_type": "HTML",
+            "_document_title": "company_policies_handbook.html",
+            "_source_uri": "https://northstar-assist-kb-5ca661ad.s3.amazonaws.com/html/company_policies_handbook.html",
+            "_chunk_id": "aCpMIKy2wtVvkNZ6eJ-etOx5IHosT_h04z1Tso9xH38",
+            "_data_source_type": "S3",
+            "_language_code": "en",
+            "_created_at": "2026-10-09T01:09:29Z",
+            "_last_updated_at": "2026-10-09T01:09:29Z",
+            "_data_source_id": "DR2JEWLD2V"
+          },
+          "score": 0.8861284852027893
+        }
+      ]
+    }
+  ],
+  "stop_reasons": [
+    "tool_use",
+    "tool_result",
+    "end_turn"
+  ],
+  "usage": {
+    "inputTokens": 3718,
+    "outputTokens": 226,
+    "totalTokens": 3944
+  },
+  "latency_ms": 2602,
+  "errors": [],
+  "retrieved_chunk_count": 5,
+  "retrieved_sources": [
+    "https://northstar-assist-kb-5ca661ad.s3.amazonaws.com/html/company_policies_handbook.html",
+    "https://northstar-assist-kb-5ca661ad.s3.amazonaws.com/docx/security_policy.docx"
+  ],
+  "hook_events": [],
+  "stop_reason": "end_turn"
+}

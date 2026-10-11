@@ -1,0 +1,12 @@
+{
+    "items": [
+        {
+            "targetId": "5QFJRBLA4V",
+            "name": "northstar-kb",
+            "status": "READY",
+            "createdAt": "2026-10-10T19:09:27.329912+00:00",
+            "updatedAt": "2026-10-10T19:09:28.175230+00:00",
+            "targetType": "CONNECTOR"
+        }
+    ]
+}
