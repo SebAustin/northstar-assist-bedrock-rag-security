@@ -2,6 +2,7 @@
 # Build the reviewer-facing submission archives from the committed project.
 #   northstar-assist-submission.zip         the seven deliverables at the top level, screenshots, and the project
 #   northstar-assist-deliverables-only.zip  the same without the project folder (small; documents and screenshots)
+#   northstar-assist-submission-slim.zip    Word reports and the project's own code only (smallest)
 # Run tools/export_docs.sh first if a deliverable changed.
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -36,9 +37,21 @@ cp "${ROOT}/SUBMISSION_INDEX.md" "${TOP}/README.md"
 cd "$STAGE"
 rm -f "${ROOT}/northstar-assist-deliverables-only.zip" "${ROOT}/northstar-assist-submission.zip"
 zip -qr "${ROOT}/northstar-assist-deliverables-only.zip" Northstar-Assist-Submission
-git -C "$ROOT" archive --format=tar --prefix=Northstar-Assist-Submission/project/ HEAD | tar -xf - -C "$STAGE"
+# submission/ is left out of project/: the same files are already at the top level of the archive
+git -C "$ROOT" archive --format=tar --prefix=Northstar-Assist-Submission/project/ HEAD -- . ':!submission' | tar -xf - -C "$STAGE"
 zip -qr "${ROOT}/northstar-assist-submission.zip" Northstar-Assist-Submission
-for archive in northstar-assist-deliverables-only.zip northstar-assist-submission.zip; do
+# Slim archive: Word reports only (screenshots are embedded) and the project's own code. No course starter
+# files, no raw evidence, no PDF copies, no duplicate reports.
+SLIM="${STAGE}/slim/Northstar-Assist-Submission"
+mkdir -p "${SLIM}/code"
+cp "${TOP}"/Task*.docx "$SLIM/"
+cp "${ROOT}/SUBMISSION_INDEX_SLIM.md" "${SLIM}/README.md"
+git -C "$ROOT" archive --format=tar HEAD infra tools tests guardrail iam monitoring redteam content streamlit_app \
+  README.md ACCEPTANCE.md requirements-dev.txt pytest.ini ruff.toml | tar -xf - -C "${SLIM}/code"
+rm -f "${SLIM}/code/streamlit_app/README.docx" "${ROOT}/northstar-assist-submission-slim.zip"
+(cd "${STAGE}/slim" && zip -qr "${ROOT}/northstar-assist-submission-slim.zip" Northstar-Assist-Submission)
+
+for archive in northstar-assist-submission-slim.zip northstar-assist-deliverables-only.zip northstar-assist-submission.zip; do
   unzip -tq "${ROOT}/${archive}" >/dev/null
   echo "${archive}: $(unzip -l "${ROOT}/${archive}" | tail -1 | awk '{print $2}') files, $(du -h "${ROOT}/${archive}" | cut -f1 | tr -d ' ')"
 done

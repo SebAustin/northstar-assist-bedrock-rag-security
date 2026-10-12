@@ -1,5 +1,9 @@
 # Northstar Assist: build, harden and validate a RAG agent on Amazon Bedrock AgentCore
 
+## For the reviewer
+
+The seven course deliverables are in [`submission/`](submission/), as PDF and Word, named by task. Start with [`submission/README.md`](submission/README.md): it maps each rubric item to its file and section.
+
 Northstar Assist is an internal question-answering agent for the fictional company Northstar Technologies. It answers employee questions from 30 synthetic company documents and names the source document it used. It runs on Amazon Bedrock AgentCore (a Harness running Claude Haiku 4.5, a Gateway, and a Managed Knowledge Base over S3). This repository is the finished Udacity "AI Security Engineer" project: the agent was deployed, hardened (guardrail, least-privilege IAM, monitoring) and validated in a temporary AWS Cloud Lab account, and the seven course deliverables are in `deliverables/`.
 
 ## Architecture
